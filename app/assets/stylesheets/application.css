@@ -1,7 +1,6 @@
-@import "bootstrap.min";
-@import "font-awesome";
-
-@import "slick";
-@import "magnific-popup";
-@import "animate.min";
-@import "app";
+ *= require "bootstrap.min";
+ *= require "font-awesome";
+ *= require "slick";
+ *= require "magnific-popup";
+ *= require "animate.min";
+ *= require "app";

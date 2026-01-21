@@ -2179,7 +2179,7 @@ input[type=search]::-webkit-search-results-decoration {
   -webkit-transition-delay: 0.3s;
   background-color: #cae9f0;
   opacity: 0.8;
-  cursor: url(../media/close.png), auto;
+  cursor: url(https://uiparadox.co.uk/templates/educate/assets/media/close.png), auto;
 }
 @media (max-width: 767px) {
   .search-popup .search-popup__overlay {
@@ -2819,7 +2819,7 @@ input[type=search]::-webkit-search-results-decoration {
 }
 
 footer .footer_main {
-  background: url(../media/backgrounds/footer-bg.png) no-repeat;
+  background: url(https://uiparadox.co.uk/templates/educate/assets/media/backgrounds/footer-bg.png) no-repeat;
   background-size: cover;
   position: relative;
 }
@@ -2926,7 +2926,7 @@ footer .copyright_row P {
 .hero-banner-1 {
   position: relative;
   height: 855px;
-  background: url(../media/banners/hero-banner-1/hero-bg.png) no-repeat;
+  background: url(https://uiparadox.co.uk/templates/educate/assets/media/banners/hero-banner-1/hero-bg.png) no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -3203,7 +3203,7 @@ footer .copyright_row P {
 
 .hero-banner-2 {
   position: relative;
-  background: url(../media/banners/hero-banner-2/banner-bg.png) no-repeat;
+  background: url(https://uiparadox.co.uk/templates/educate/assets/media/banners/hero-banner-2/banner-bg.png) no-repeat;
   background-size: cover;
   background-position: bottom right;
 }
@@ -3628,7 +3628,7 @@ footer .copyright_row P {
 .blog_card .blog_card_text_block {
   position: relative;
   z-index: 10;
-  background: url(../media/backgrounds/blog_card_bg.png) no-repeat;
+  background: url(https://uiparadox.co.uk/templates/educate/assets/media/backgrounds/blog_card_bg.png) no-repeat;
   background-size: contain;
   background-position: top;
   margin-top: -88px;
@@ -3701,7 +3701,7 @@ footer .copyright_row P {
 .blog_list_card .blog_card_text_block {
   position: relative;
   z-index: 10;
-  background: url(../media/backgrounds/blog_card_list_bg.png) no-repeat;
+  background: url(https://uiparadox.co.uk/templates/educate/assets/media/backgrounds/blog_card_list_bg.png) no-repeat;
   background-size: cover;
   background-position: left;
   margin-left: -80px;
@@ -3846,7 +3846,7 @@ footer .copyright_row P {
 .team-slider {
   border-radius: 15px 0 0 15px;
   background: rgba(10, 166, 215, 0.1);
-  background: url(../media/backgrounds/team-slider-bg.png) no-repeat;
+  background: url(https://uiparadox.co.uk/templates/educate/assets/media/backgrounds/team-slider-bg.png) no-repeat;
   background-size: cover;
   background-position: 109px;
 }
@@ -3857,7 +3857,7 @@ footer .copyright_row P {
 
 .team_one__content {
   position: relative;
-  background: url(../media/shapes/paint-shape.png) no-repeat;
+  background: url(https://uiparadox.co.uk/templates/educate/assets/media/shapes/paint-shape.png) no-repeat;
   background-position: center right;
   background-size: contain;
   padding-left: 96px;
@@ -4225,7 +4225,7 @@ footer .copyright_row P {
 }
 
 .form_page {
-  background: url(../media/backgrounds/login.png);
+  background: url(https://uiparadox.co.uk/templates/educate/assets/media/backgrounds/login.png);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -4344,7 +4344,7 @@ footer .copyright_row P {
 }
 
 .page_title_banner {
-  background: url(../media/banners/page-title-bg_2.png);
+  background: url(https://uiparadox.co.uk/templates/educate/assets/media/banners/page-title-bg_2.png);
   background-position: center;
   height: 562px;
   position: relative;
@@ -4362,7 +4362,7 @@ footer .copyright_row P {
 }
 @media (max-width: 575px) {
   .page_title_banner {
-    background: url(../media/banners/page-title-bg.png);
+    background: url(https://uiparadox.co.uk/templates/educate/assets/media/banners/page-title-bg.png);
     height: 350px;
   }
 }
@@ -4548,14 +4548,14 @@ footer .copyright_row P {
 }
 
 .courses-1 {
-  background: url(../media/backgrounds/courses-1.png) no-repeat;
+  background: url(https://uiparadox.co.uk/templates/educate/assets/media/backgrounds/courses-1.png) no-repeat;
   background-size: cover;
   background-position: center;
   background-size: cover;
 }
 
 .courses-2 {
-  background: url(../media/backgrounds/courses-2.png) no-repeat;
+  background: url(https://uiparadox.co.uk/templates/educate/assets/media/backgrounds/courses-2.png) no-repeat;
   background-size: cover;
   background-position: center;
   background-size: cover;
@@ -5254,7 +5254,7 @@ footer .copyright_row P {
 }
 
 .discount_banner {
-  background: url(../media/backgrounds/coming-soon-banner.png) no-repeat;
+  background: url(https://uiparadox.co.uk/templates/educate/assets/media/backgrounds/coming-soon-banner.png) no-repeat;
   background-size: cover;
   background-position: center;
   overflow: hidden;
@@ -5315,7 +5315,7 @@ footer .copyright_row P {
   }
 }
 .discount_banner .discount_countdown .dial {
-  background: url(..//media/shapes/exclude.png);
+  background: url(https://uiparadox.co.uk/templates/educate/assets//media/shapes/exclude.png);
   position: absolute;
   right: 31px;
   top: 0;
@@ -5438,7 +5438,7 @@ footer .copyright_row P {
 }
 
 .contact_banner {
-  background: url(../media/backgrounds/banner-bg.png) no-repeat;
+  background: url(https://uiparadox.co.uk/templates/educate/assets/media/backgrounds/banner-bg.png) no-repeat;
   background-size: cover;
   height: 344px;
   display: grid;
@@ -5720,7 +5720,7 @@ footer .copyright_row P {
 
 .news_letter_banner {
   padding: 121px 16px 310px;
-  background: url(../media/backgrounds/banner-bg-2.png) no-repeat;
+  background: url(https://uiparadox.co.uk/templates/educate/assets/media/backgrounds/banner-bg-2.png) no-repeat;
   background-size: cover;
   background-position: center;
   overflow: hidden;
@@ -5910,7 +5910,7 @@ footer .copyright_row P {
 
 .benefits {
   position: relative;
-  background: url(../media/backgrounds/benefits-bg.png) no-repeat;
+  background: url(https://uiparadox.co.uk/templates/educate/assets/media/backgrounds/benefits-bg.png) no-repeat;
   background-size: cover;
   background-position: center;
 }
