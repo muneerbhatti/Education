@@ -9,6 +9,6 @@ import "jquery-countdown"
 import "jquery-magnific-popup"
 import "slick"
 import "jquery2"
-import "WOW"
+// import "wow"
 import "app"
 

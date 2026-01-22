@@ -33,6 +33,9 @@ STYLE SHEET INDEXING
 /*-------------------------
   Basic Styles
 -------------------------*/
+a {
+    text-decoration: none !important;
+}
 img {
   max-width: 100%;
   height: auto;

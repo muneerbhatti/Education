@@ -19,12 +19,67 @@
 
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
-     <%= javascript_importmap_tags %>
   </head>
 
   <body class="custom-cursor locked">
-    <%#=render "shared/navbar"%>
-    <%= yield %>
+    <%=render 'shared/preload'%>
+     <!-- Main Wrapper Start -->
+    <div id="main-wrapper" class="main-wrapper">
+      <%=render 'shared/navbar'%>
+      <%= yield %>
+      <%=render 'shared/footer'%>
+    </div>
 
+    <!-- Mobile Menu Start -->
+    <div class="mobile-nav__wrapper">
+      <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+      <div class="mobile-nav__content">
+        <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+        <div class="logo-box">
+          <a href="index.html" aria-label="logo image"><img src="https://uiparadox.co.uk/templates/educate/assets/media/logo-light.png" alt="educate"></a>
+        </div>
+        <div class="mobile-nav__container"></div>
+        <ul class="mobile-nav__contact list-unstyled">
+          <li>
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:example@company.com">example@company.com</a>
+          </li>
+          <li>
+            <i class="fa fa-phone-alt"></i>
+            <a href="tel:+12345678">+123 (4567) -890</a>
+          </li>
+        </ul>
+        <div class="mobile-nav__social">
+
+          <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.pinterest.com/"><i class="fab fa-pinterest-p"></i></a>
+          <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile Menu End -->
+
+    <div class="search-popup">
+      <div class="search-popup__overlay search-toggler"></div>
+      <div class="search-popup__content">
+        <form role="search" method="get" class="search-popup__form" action="index.html">
+          <input type="text" id="search" placeholder="Search Here...">
+          <button type="submit"><i class="fal fa-search"></i></button>
+        </form>
+      </div>
+    </div>
+    <!-- search-popup -->
+
+    <!-- back-to-top-start -->
+    <a href="#" class="scroll-top">
+      <svg class="scroll-top__circle" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+      </svg>
+    </a>
+    <!-- back-to-top-end -->
+    </div>
+    <%= javascript_importmap_tags %>
+    <script src="https://wowjs.uk/dist/wow.min.js"></script>
+    <script>new WOW().init();</script>
   </body>
 </html>
