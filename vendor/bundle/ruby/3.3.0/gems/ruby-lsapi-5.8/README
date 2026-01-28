@@ -1,0 +1,165 @@
+
+lsapi - LSAPI extension for Ruby
+================================
+
+INSTALL
+-------
+
+  $ ruby setup.rb config
+  $ ruby setup.rb setup
+  # ruby setup.rb install
+
+USAGE
+-----
+
+General CGI scripts
+^^^^^^^^^^^^^^^^^^^
+The most efficient way to use LSAPI interface is to modify your CGI scripts. 
+You need to add the following code to your CGI scripts:
+
+  require 'lsapi'
+  
+  while LSAPI.accept != nil
+
+     <your CGI script>
+     ...
+
+  end
+
+There is no need to change the way that how CGI environment variables 
+are being accessed in your scripts.
+
+You can find some examples under examples/ folder.
+
+
+Ruby Script Runner
+^^^^^^^^^^^^^^^^^^
+If you don't want to change your existing Ruby CGI code, you can use our 
+Ruby script runner under scripts/ folder. You need to configure 
+lsruby_runner.rb as a LSAPI application, then add a script handler 
+for "rb" suffix.
+
+
+
+Rails dispatcher
+^^^^^^^^^^^^^^^^
+
+With Ruby LSAPI, we proudly provide a optimum platform for Rails application
+deployment. Ruby LSAPI has the following advantages over other solutions.
+
+  * Easy configuration, deploy a Rails application only take a few clicks
+    with our Rails easy configuration
+  * Fast startup, the expensive Rails framework initialization only takes
+    place once when multiple processes need to be started
+  * Resource efficience, ruby processes can be started on demand, idle
+    process will be stop.
+    
+To use LSAPI with Ruby on Rails, please check out our toturial
+http://www.litespeedtech.com/support/wiki/doku.php
+
+There are a few environment variables that can be tweaked to tune ruby 
+LSAPI process.
+
+* LSAPI_CHILDREN                (default: 0)
+
+LSAPI_CHILDREN controls the maximum number of children processes can be
+started by the first ruby process started by web server. When set to <=1,
+the first ruby process will handle request by itself, without starting any
+child process. When LSAPI_CHILDREN is >1, the LSAPI application is stared in
+"Self Managed Mode", which will start children processes based on demand.
+With Rails easy configuration, LSAPI_CHILDREN is set to the value of
+"Max Connections" by web server, no need to set it explicitly.
+
+Usually, there is no need to set value of LSAPI_CHILDREN over 100 in most
+server environment.
+
+
+* LSAPI_AVOID_FORK              (default: 0)
+
+LSAPI_AVOID_FORK specifies the policy of the internal process manager in
+"Self Managed Mode". When set to 0, the internal process manager will stop
+and start children process on demand to save system resource. This is
+preferred in a shared hosting environment. When set to 1, the internal
+process manager will try to avoid freqently stopping and starting children
+process. This might be preferred in a dedicate hosting environment.
+
+
+* LSAPI_EXTRA_CHILDREN          (default: 1/3 of LSAPI_CHILDREN or 0)
+
+LSAPI_EXTRA_CHILDREN controls the maximum number of extra children processes
+can be started when some or all existing children processes are in
+malfunctioning state. Total number of children processes will be reduced to
+LSAPI_CHILDREN level as soon as service is back to normal.
+When LSAPI_AVOID_FORK is set to 0, the default value is 1/3 of
+LSAPI_CHIDLREN, When LSAPI_AVOID_FORK is set to 1, the default value is 0.
+
+
+* LSAPI_MAX_REQS                (default value: 10000)
+
+LSAPI_MAX_REQS specifies the maximum number of requests each child
+process will handle before it exits automatically. This parameter can
+help reducing memory usage when there are memory leaks in the application. 
+
+
+* LSAPI_MAX_IDLE                (default value: 300 seconds)
+
+In Self Managed Mode, LSAPI_MAX_IDLE controls how long a idle child  
+process will wait for a new request before exit. This option help 
+releasing system resources taken by idle processes.
+
+
+* LSAPI_MAX_IDLE_CHILDREN
+    (default value: 1/3 of LSAPI_CHILDREN or LSAPI_CHILDREN)
+
+In Self Managed Mode, LSAI_MAX_IDLE_CHILDREN controls how many idle 
+children processes are allowed. Excessive idle children processes
+will be killed by the parent process.
+When LSAPI_AVOID_FORK is set to 0, the default value is 1/3 of
+LSAPI_CHIDLREN, When LSAPI_AVOID_FORK is set to 1, the default value
+is LSAPI_CHILDREN.
+
+
+* LSAPI_MAX_PROCESS_TIME        (default value: 300 seconds)
+
+In Self Managed Mode, LSAPI_MAX_PROCESS_TIME controls the maximum 
+processing time allowed when processing a request. If a child process
+can not finish processing of a request in the given time period, it 
+will be killed by the parent process. This option can help getting rid 
+of dead or runaway child process.
+
+
+* LSAPI_PGRP_MAX_IDLE           (default value: FOREVER )
+
+In Self Managed Mode, LSAPI_PGRP_MAX_IDLE controls how long the parent
+process will wait before exiting when there is no child process.
+This option help releasing system resources taken by an idle parent 
+process.
+
+
+* LSAPI_PPID_NO_CHECK
+
+By default a LSAPI application check the existence of its parent process
+and exits automatically if the parent process died. This is to reduce 
+orphan process when web server is restarted. However, it is desireable 
+to disable this feature, such as when a LSAPI process was started 
+manually from command line. LSAPI_PPID_NO_CHECK should be set when 
+you want to disable the checking of existence of parent process.
+
+
+License
+-------
+
+LSAPI library code is under BSD license
+
+LSAPI ruby extension code is under Ruby license
+
+* ((<URL:http://www.ruby-lang.org/ja/LICENSE.txt>)) (Japanese)
+* ((<URL:http://www.ruby-lang.org/en/LICENSE.txt>)) (English)
+
+
+Copyright
+---------
+
+Copyright (C) 2006 Lite Speed Technologies Inc.
+
+
