@@ -26,6 +26,11 @@
      <!-- Main Wrapper Start -->
     <div id="main-wrapper" class="main-wrapper">
       <%=render 'shared/navbar'%>
+      <!-- Sticky Header -->
+      <div class="stricky-header stricked-menu main-menu">
+        <div class="sticky-header__content"></div>
+      </div>
+      <!-- Header Area End  -->
       <%= yield %>
       <%=render 'shared/footer'%>
     </div>
