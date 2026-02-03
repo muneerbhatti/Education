@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get "team", to: "home#team", as: :team
   get "gallery", to: "home#gallery", as: :gallery
   get "faq", to: "home#faq", as: :faq
-  get "home/courses"
+  get "courses", to: "home#courses", as: :courses
   get "up" => "rails/health#show", as: :rails_health_check
 
 end
