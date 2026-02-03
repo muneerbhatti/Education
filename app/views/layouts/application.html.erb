@@ -2,6 +2,8 @@
 <html>
   <head>
     <title><%= content_for(:title) || "Education" %></title>
+        <%= javascript_importmap_tags %>
+
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
@@ -83,7 +85,6 @@
     </a>
     <!-- back-to-top-end -->
     </div>
-    <%= javascript_importmap_tags %>
     <script src="https://wowjs.uk/dist/wow.min.js"></script>
     <script>new WOW().init();</script>
   </body>
