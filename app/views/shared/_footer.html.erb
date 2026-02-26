@@ -10,7 +10,7 @@
                 <a href="index.html" class="mb-8">
                   <%=image_tag 'logo2.png', style: 'width: 160px'%>
                 </a>
-                <p class="description_text">Providing comprehensive ABA therapy and specialized support services to help individuals reach their full potential in life, learning, and community through evidence-based behavioral strategies combined with compassionate care.</p>
+                <p class="description_text"><%=website_detail['about']%></p>
               </div>
             </div>
             <div class="col-xl-2 col-lg-3 col-sm-6">
@@ -47,10 +47,10 @@
               <div class="footer_widget">
                 <h5 class="medium-black mb-16">Contact Us</h5>
                 <ul class="unstyled list">
-                  <li class="mb-16"><i class="fal fa-map-marker-alt"></i>631 Elgin ST. Celina, State 111111</li>
+                  <li class="mb-16"><i class="fal fa-map-marker-alt"></i><%=website_detail['address_1']%></li>
                   <li class="mb-16"><a href="mailto:info@example.com"><i
-                        class="fal fa-envelope"></i>email@example.com</a></li>
-                  <li><a href="tel:123456789"><i class="fal fa-phone-alt"></i>+1 234 567 890</a></li>
+                        class="fal fa-envelope"></i><%=website_detail['email']%></a></li>
+                  <li><a href="tel:123456789"><i class="fal fa-phone-alt"></i><%=website_detail['phone_1']%></a></li>
                 </ul>
               </div>
             </div>
@@ -58,12 +58,12 @@
           <div class="bottom-row">
             <ul class="unstyled social_icons_list">
               <li>
-                <a href="">
+                <a href="<%=website_detail['instagram']%>">
                   <img src="https://uiparadox.co.uk/templates/educate/assets/media/icons/brands/Instagram.png" alt="">
                 </a>
               </li>
               <li>
-                <a href="">
+                <a href="<%=website_detail[:facebook]%>">
                   <img src="https://uiparadox.co.uk/templates/educate/assets/media/icons/brands/Facebook.png" alt="">
                 </a>
               </li>

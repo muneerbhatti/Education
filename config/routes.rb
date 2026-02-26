@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  devise_for :users
+  namespace :admin do
+    resources :website_details
+      # root to: "services#index"
+  end
   root "home#index"
   get "about-us", to: "home#about_us", as: :about_us
   get "join-us", to: "home#join_us", as: :join_us
