@@ -8,19 +8,19 @@
   <section class="hero-banner-1">
     <div class="container">
       <div class="icons">
-        <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/dollar.png" alt="" class="dollar wow zoomIn" data-wow-delay="400ms">
-        <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/mic.png" alt="" class="mic wow zoomIn" data-wow-delay="500ms">
-        <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/light.png" alt="" class="light wow zoomIn" data-wow-delay="600ms">
-        <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/camera.png" alt="" class="camera wow zoomIn" data-wow-delay="700ms">
+        <%= image_tag "dollar.png", class: "dollar wow zoomIn", data: { wow_delay: "400ms" } %>
+        <%= image_tag "mic.png", class: "mic wow zoomIn", data: { wow_delay: "500ms" } %>
+        <%= image_tag "light.png", class: "light wow zoomIn", data: { wow_delay: "600ms" } %>
+        <%= image_tag "camera.png", class: "camera wow zoomIn", data: { wow_delay: "700ms" } %>
       </div>
       <div class="content">
         <div class="text_block wow fadeInUp" data-wow-delay="800ms">
           <div class="row">
             <div class="col-xl-6 col-lg-8">
-              <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/tag.png" alt="" class="mb-24 tag wow slideInDown" data-wow-delay="550ms">
+              <%= image_tag "tag.png" , class:"mb-24 tag wow slideInDown",data: { wow_delay: "550ms" } %>            
               <h1 class="mb-16 title">
                 Empowering Lives Through <span class="fm-sec">ABA Therapy!
-                  <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/rocket.png" alt="" class="rocket wow zoomIn" data-wow-delay="700ms">
+                  <%=image_tag "rocket.png", class:"rocket wow zoomIn",data: { wow_delay:"700ms"} %>
                 </span>
               </h1>
               <h4 class="mb-48">Personalized Behavioral Support for Children, Teens & Adults</h4>
@@ -28,10 +28,11 @@
                 <a href="contact.html" class="educate-btn sec">
                   <span class="educate-btn__curve"></span>Get Started
                 </a>
-                <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/arrow.png" alt="" class="arrow">
+                <%= image_tag "arrow.png", class:"arrow"%>
               </div>
               <div class="video-btn wow zoomIn" data-wow-delay="700ms">
-                <img src="https://uiparadox.co.uk/templates/educate/assets/media/banners/hero-banner-1/round-text.png" alt="" class="text-vector">
+                <%=image_tag "round-text.png", class:"text-vector" %>
+                
                 <a href="https://www.youtube.com/watch?v=8nXX1WOuvrk" class="play-btn video-popup">
                   <i class="fas fa-play"></i>
                 </a>
@@ -47,7 +48,8 @@
           <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/target-2.png" alt="" class="target_icon">
         </div>
       </div>
-      <img src="https://uiparadox.co.uk/templates/educate/assets/media/banners/hero-banner-1/main-img.png" alt="" class="main-img">
+      <%= image_tag "main-img.png", class:"main-img" %>
+      
     </div>
   </section>
   <!-- Hero Banner End -->
@@ -64,7 +66,7 @@
             <div class="feature__content">
               <h5 class="mb-8">Individualized Plans</h5>
               <p>Therapy programs tailored to each individual’s unique needs.</p>
-              <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/feture-bg-shape.png" alt="" class="feature-bg-shape">
+              <%=image_tag "feture-bg-shape.png",class:"feature-bg-shape" %>
             </div>
           </div>
         </div>
@@ -72,12 +74,13 @@
         <div class="col-xl-3 col-sm-6 wow fadeInUp" data-wow-delay="400ms">
           <div class="feature__card mb-24 mb-xl-0">
             <div class="feature__icon">
-              <img src="https://uiparadox.co.uk/templates/educate/assets/media/icons/Quality.png" alt="">
+               <%= image_tag "Quality.png"%>
+              
             </div>
             <div class="feature__content">
               <h5 class="mb-8">Certified Professionals</h5>
               <p>BCBAs, BCaBAs, and RBTs delivering expert care.</p>
-              <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/feture-bg-shape.png" alt="" class="feature-bg-shape">
+              <%= image_tag "feture-bg-shape.png",class:"feature-bg-shape"%>
             </div>
           </div>
         </div>
@@ -85,12 +88,12 @@
         <div class="col-xl-3 col-sm-6 wow fadeInUp" data-wow-delay="600ms">
           <div class="feature__card mb-24 mb-sm-0">
             <div class="feature__icon">
-              <img src="https://uiparadox.co.uk/templates/educate/assets/media/icons/Check-mark.png" alt="">
+              <%= image_tag "Check-mark.png" %>
             </div>
             <div class="feature__content">
               <h5 class="mb-8">Data-Driven Progress</h5>
               <p>Continuous assessment to ensure measurable outcomes.</p>
-              <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/feture-bg-shape.png" alt="" class="feature-bg-shape">
+              <%=image_tag "feture-bg-shape.png",class:"feature-bg-shape" %>
             </div>
           </div>
         </div>
@@ -103,7 +106,7 @@
             <div class="feature__content">
               <h5 class="mb-8">Family Support</h5>
               <p>Collaborative guidance for families and caregivers.</p>
-              <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/feture-bg-shape.png" alt="" class="feature-bg-shape">
+              <%=image_tag "feture-bg-shape.png",class:"feature-bg-shape" %>
             </div>
           </div>
         </div>
@@ -125,7 +128,7 @@
           <p class="mb-32">Providing comprehensive ABA therapy and specialized support services to help individuals reach their full potential in life, learning, and community through evidence-based behavioral strategies combined with compassionate care.</p>
           <div class="about__card mb-24 wow fadeInLeft" data-wow-delay="200ms">
             <div class="about__card__icon">
-              <img src="https://uiparadox.co.uk/templates/educate/assets/media/icons/Clock.png" alt="">
+              <%= image_tag "Clock.png"%>
             </div>
             <div class="about__card__content">
               <h5 class="mb-4p">Individualized Programs</h5>
@@ -134,7 +137,7 @@
           </div>
           <div class="about__card mb-24 wow fadeInLeft" data-wow-delay="400ms">
             <div class="about__card__icon">
-              <img src="https://uiparadox.co.uk/templates/educate/assets/media/icons/WiFi.png" alt="">
+              <%=image_tag "WiFi.png" %>
             </div>
             <div class="about__card__content">
               <h5 class="mb-4p">Data-Driven Approach</h5>
@@ -148,7 +151,7 @@
         <div class="col-lg-6">
           <div class="educate-tilt"
             data-tilt-options='{ "glare": false, "maxGlare": 0, "maxTilt": 2, "speed": 700, "scale": 1 }'>
-            <img src="https://uiparadox.co.uk/templates/educate/assets/media/resources/about-1.png" alt="">
+            <%=image_tag "about-1.png"  %>
           </div>
         </div>
       </div>
@@ -160,40 +163,41 @@
   <div class="py-80 bg-white">
     <div class="brands-slider">
       <div class="brand">
-        <img src="https://uiparadox.co.uk/templates/educate/assets/media/brand/barnd-1.png" alt="">
+        <%=image_tag "barnd-1.png"%>
       </div>
       <div class="brand">
-        <img src="https://uiparadox.co.uk/templates/educate/assets/media/brand/barnd-2.png" alt="">
+        <%=image_tag "barnd-2.png"%>
       </div>
       <div class="brand">
-        <img src="https://uiparadox.co.uk/templates/educate/assets/media/brand/barnd-3.png" alt="">
+        <%=image_tag "barnd-3.png"%>
       </div>
       <div class="brand">
-        <img src="https://uiparadox.co.uk/templates/educate/assets/media/brand/barnd-4.png" alt="">
+        <%=image_tag "barnd-3.png"%>
       </div>
       <div class="brand">
-        <img src="https://uiparadox.co.uk/templates/educate/assets/media/brand/barnd-5.png" alt="">
+        <%=image_tag "barnd-5.png"%>
       </div>
       <div class="brand">
-        <img src="https://uiparadox.co.uk/templates/educate/assets/media/brand/barnd-6.png" alt="">
+        <%=image_tag "barnd-6.png"%>
       </div>
       <div class="brand">
-        <img src="https://uiparadox.co.uk/templates/educate/assets/media/brand/barnd-1.png" alt="">
+        <%=image_tag "barnd-1.png"%>
       </div>
       <div class="brand">
-        <img src="https://uiparadox.co.uk/templates/educate/assets/media/brand/barnd-2.png" alt="">
+        <%=image_tag "barnd-2.png"%>
       </div>
       <div class="brand">
-        <img src="https://uiparadox.co.uk/templates/educate/assets/media/brand/barnd-3.png" alt="">
+        <%=image_tag "barnd-3.png"%>
       </div>
       <div class="brand">
-        <img src="https://uiparadox.co.uk/templates/educate/assets/media/brand/barnd-4.png" alt="">
+        <%=image_tag "barnd-4.png"%>
       </div>
       <div class="brand">
-        <img src="https://uiparadox.co.uk/templates/educate/assets/media/brand/barnd-5.png" alt="">
+        <%=image_tag "barnd-5.png"%>
       </div>
       <div class="brand">
-        <img src="https://uiparadox.co.uk/templates/educate/assets/media/brand/barnd-6.png" alt="">
+        <%=image_tag "barnd-6.png"%>
+        
       </div>
     </div>
   </div>
@@ -236,7 +240,7 @@
                 <li><i class="fal fa-clock"></i>45-60 min</li>
               </ul>
             </div>
-            <img src="https://uiparadox.co.uk/templates/educate/assets/media/courses/categories/c-2.png" alt="" class="image">
+            <%= image_tag "c-2.png", class:"image"%>
           </div>
         </div>
         <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="450ms">
@@ -250,7 +254,7 @@
                 <li><i class="fal fa-clock"></i>20-30 min</li>
               </ul>
             </div>
-            <img src="https://uiparadox.co.uk/templates/educate/assets/media/courses/categories/c-4.png" alt="" class="image">
+            <%=image_tag "c-4.png", class:"image"%>
           </div>
         </div>
         <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="600ms">
@@ -264,7 +268,7 @@
                 <li><i class="fal fa-clock"></i>45-60 min</li>
               </ul>
             </div>
-            <img src="https://uiparadox.co.uk/templates/educate/assets/media/courses/categories/c-3.png" alt="" class="image">
+            <%=image_tag "barnd-2.png"%>
           </div>
         </div>
         <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="750ms">
@@ -278,7 +282,7 @@
                 <li><i class="fal fa-clock"></i>45-60 min</li>
               </ul>
             </div>
-            <img src="https://uiparadox.co.uk/templates/educate/assets/media/courses/categories/c-5.png" alt="" class="image">
+            <%=image_tag "c-5.png", class:"image" %>
           </div>
         </div>
         <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="900ms">
@@ -292,7 +296,7 @@
                 <li><i class="fal fa-clock"></i>Multiple</li>
               </ul>
             </div>
-            <img src="https://uiparadox.co.uk/templates/educate/assets/media/courses/categories/c-6.png" alt="" class="image">
+            <%= image_tag "c-6.png",class:"image"%>
           </div>
         </div>
       </div>
@@ -316,7 +320,7 @@
       <!-- Slide Item  -->
       <div class="course__card mb-24">
         <div class="course__card__icon">
-          <img src="https://uiparadox.co.uk/templates/educate/assets/media/icons/ps.png" alt="">
+          <%= image_tag "ps.png"%>
         </div>
         <div class="course__card__content">
           <div class="left__block">
@@ -328,7 +332,7 @@
               <li><i class="fal fa-clock"></i>30-45 min</li>
             </ul>
             <div class="author_card">
-              <img src="https://uiparadox.co.uk/templates/educate/assets/media/courses/authors/a-1.png" alt="" class="author_img">
+              <%= image_tag "a-1.png",class:"author_img" %>
               <div class="author_text_block">
                 <a href="team-detail.html" class="h6 mb-4p">Brandy</a>
                 <p>PreK-5 Tutor</p>
@@ -338,24 +342,24 @@
           <div class="right__block">
             <div class="price_block mb-16">
               <div class="price_vector">
-                <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/vector-group.png" alt="">
+                <%= image_tag "vector-group.png"%>
               </div>
               <span class="h3 color-white">$240</span>
             </div>
             <a href="course-detail.html" class="educate-btn sm mx-xl-auto me-2"><span
                 class="educate-btn__curve"></span>Enroll Now</a>
           </div>
-          <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/vector-1.png" alt="" class="bottom_vector">
+          <%= image_tag "vector-1.png", class:"bottom_vector"%>
         </div>
       </div>
       <!-- Slide item  -->
       <div class="course__card mb-24">
         <div class="course__card__icon">
-          <img src="https://uiparadox.co.uk/templates/educate/assets/media/icons/ai.png" alt="">
+          <%= image_tag "ai.png" %>
         </div>
         <div class="course__card__content">
           <div class="left__block">
-            <img src="https://uiparadox.co.uk/templates/educate/assets/media/courses/tag-2.png" alt="" class="course_tag">
+            <%= image_tag "tag-2.png",class:"course_tag"%>
             <h4 class="mb-4p"><a href="course-detail.html">Momentum Builder</a></h4>
             <p class="h6 mb-24">Academic Tutoring</p>
             <ul class="course_info p-0 mb-32">
@@ -363,7 +367,7 @@
               <li><i class="fal fa-clock"></i>45-60 min</li>
             </ul>
             <div class="author_card">
-              <img src="https://uiparadox.co.uk/templates/educate/assets/media/courses/authors/a-2.png" alt="" class="author_img">
+              <%= image_tag "a-2.png",class:"author_img" %>
               <div class="author_text_block">
                 <a href="team-detail.html" class="h6 mb-4p">Corie</a>
                 <p>PreK-8 Tutor</p>
@@ -373,24 +377,24 @@
           <div class="right__block">
             <div class="price_block mb-16">
               <div class="price_vector">
-                <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/vector-group.png" alt="">
+                <%= image_tag "vector-group.png"%>
               </div>
               <span class="h3 color-white">$560</span>
             </div>
             <a href="course-detail.html" class="educate-btn sm mx-xl-auto me-2"><span
                 class="educate-btn__curve"></span>Enroll Now</a>
           </div>
-          <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/vector-1.png" alt="" class="bottom_vector">
+          <%= image_tag "vector-1.png", class:"bottom_vector"%>
         </div>
       </div>
       <!-- Slide item  -->
       <div class="course__card mb-24">
         <div class="course__card__icon">
-          <img src="https://uiparadox.co.uk/templates/educate/assets/media/icons/desktop.png" alt="">
+           <%= image_tag "desktop.png"%> 
         </div>
         <div class="course__card__content">
           <div class="left__block">
-            <img src="https://uiparadox.co.uk/templates/educate/assets/media/courses/tag-1.png" alt="" class="course_tag">
+            <%= image_tag "tag-1.png", class: "course_tag" %>
             <h4 class="mb-4p"><a href="course-detail.html">Calm & Confident</a></h4>
             <p class="h6 mb-24">SEL for Students</p>
             <ul class="course_info p-0 mb-32">
@@ -398,7 +402,7 @@
               <li><i class="fal fa-clock"></i>45 min</li>
             </ul>
             <div class="author_card">
-              <img src="https://uiparadox.co.uk/templates/educate/assets/media/courses/authors/a-3.png" alt="" class="author_img">
+              <%= image_tag "c-3.png", class:"author_img"%>
               <div class="author_text_block">
                 <a href="team-detail.html" class="h6 mb-4p">SEL Specialist</a>
                 <p>Student Support</p>
@@ -408,7 +412,7 @@
           <div class="right__block">
             <div class="price_block mb-16">
               <div class="price_vector">
-                <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/vector-group.png" alt="">
+                <%= image_tag "vector-group.png"%>
               </div>
               <span class="h3 color-white">$360</span>
             </div>
@@ -421,11 +425,11 @@
       <!-- Slide item  -->
       <div class="course__card mb-24">
         <div class="course__card__icon">
-          <img src="https://uiparadox.co.uk/templates/educate/assets/media/icons/figma.png" alt="">
+          <%= image_tag "figma.png"%>
         </div>
         <div class="course__card__content">
           <div class="left__block">
-            <img src="https://uiparadox.co.uk/templates/educate/assets/media/courses/tag-2.png" alt="" class="course_tag">
+            <%= image_tag "tag-2.png", class:"course_tag"%>
             <h4 class="mb-4p"><a href="course-detail.html">Parent Partnership SEL</a></h4>
             <p class="h6 mb-24">SEL for Parents</p>
             <ul class="course_info p-0 mb-32">
@@ -433,7 +437,7 @@
               <li><i class="fal fa-clock"></i>60 min</li>
             </ul>
             <div class="author_card">
-              <img src="https://uiparadox.co.uk/templates/educate/assets/media/courses/authors/a-4.png" alt="" class="author_img">
+              <%= image_tag "a-4.png", class:"author_img"%>
               <div class="author_text_block">
                 <a href="team-detail.html" class="h6 mb-4p">SEL Specialist</a>
                 <p>Parent Support</p>
@@ -443,24 +447,24 @@
           <div class="right__block">
             <div class="price_block mb-16">
               <div class="price_vector">
-                <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/vector-group.png" alt="">
+                <%= image_tag "vector-group.png"%>
               </div>
               <span class="h3 color-white">$220</span>
             </div>
             <a href="course-detail.html" class="educate-btn sm mx-xl-auto me-2"><span
                 class="educate-btn__curve"></span>Enroll Now</a>
           </div>
-          <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/vector-1.png" alt="" class="bottom_vector">
+          <%= image_tag "vector-1.png",class:"bottom_vector"%>
         </div>
       </div>
       <!-- Slide item  -->
       <div class="course__card mb-24">
         <div class="course__card__icon">
-          <img src="https://uiparadox.co.uk/templates/educate/assets/media/icons/ai2.png" alt="">
+           <%= image_tag "ai2.png" %>
         </div>
         <div class="course__card__content">
           <div class="left__block">
-            <img src="https://uiparadox.co.uk/templates/educate/assets/media/courses/tag-1.png" alt="" class="course_tag">
+           <%= image_tag "tag-1.png", class: "course_tag" %>
             <h4 class="mb-4p"><a href="course-detail.html">Mindful Learners</a></h4>
             <p class="h6 mb-24">Meditation for Students</p>
             <ul class="course_info p-0 mb-32">
@@ -468,7 +472,7 @@
               <li><i class="fal fa-clock"></i>20-30 min</li>
             </ul>
             <div class="author_card">
-              <img src="https://uiparadox.co.uk/templates/educate/assets/media/courses/authors/a-5.png" alt="" class="author_img">
+              <%= image_tag "a-5.png", class: "author_img" %>
               <div class="author_text_block">
                 <a href="team-detail.html" class="h6 mb-4p">Meditation Coach</a>
                 <p>Student Focus</p>
@@ -478,24 +482,24 @@
           <div class="right__block">
             <div class="price_block mb-16">
               <div class="price_vector">
-                <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/vector-group.png" alt="">
+                 <%= image_tag "vector-group.png" %>
               </div>
               <span class="h3 color-white">$160</span>
             </div>
             <a href="course-detail.html" class="educate-btn sm mx-xl-auto me-2"><span
                 class="educate-btn__curve"></span>Enroll Now</a>
           </div>
-          <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/vector-1.png" alt="" class="bottom_vector">
+          <%= image_tag "vector-1.png", class: "bottom_vector" %>
         </div>
       </div>
       <!-- Slide item  -->
       <div class="course__card mb-24">
         <div class="course__card__icon">
-          <img src="https://uiparadox.co.uk/templates/educate/assets/media/icons/ai3.png" alt="">
+           <%# <%= image_tag "ai3.png" %> 
         </div>
         <div class="course__card__content">
           <div class="left__block">
-            <img src="https://uiparadox.co.uk/templates/educate/assets/media/courses/tag-2.png" alt="" class="course_tag">
+             <%= image_tag "tag-2.png", class: "course_tag" %>
             <h4 class="mb-4p"><a href="course-detail.html">Student Success Bundle</a></h4>
             <p class="h6 mb-24">Academic + SEL Bundle</p>
             <ul class="course_info p-0 mb-32">
@@ -503,7 +507,7 @@
               <li><i class="fal fa-clock"></i>45 min</li>
             </ul>
             <div class="author_card">
-              <img src="https://uiparadox.co.uk/templates/educate/assets/media/courses/authors/a-6.png" alt="" class="author_img">
+              <%= image_tag "a-6.png", class: "author_img" %>
               <div class="author_text_block">
                 <a href="team-detail.html" class="h6 mb-4p">Team Package</a>
                 <p>Complete Support</p>
@@ -512,6 +516,7 @@
           </div>
           <div class="right__block">
             <div class="price_block mb-16">
+              <%= image_tag "vector-1.png", class: "bottom_vector" %>
               <div class="price_vector">
                 <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/vector-group.png" alt="">
               </div>
@@ -520,7 +525,7 @@
             <a href="course-detail.html" class="educate-btn sm mx-xl-auto me-2"><span
                 class="educate-btn__curve"></span>Enroll Now</a>
           </div>
-          <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/vector-1.png" alt="" class="bottom_vector">
+           <%= image_tag "vector-1.png", class: "bottom_vector" %>
         </div>
       </div>
     </div>
@@ -529,8 +534,8 @@
 
   <!-- Team Area Start -->
   <section class="team py-60">
-    <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/dots-1.png" alt="" class="dots">
-    <img src="https://uiparadox.co.uk/templates/educate/assets/media/icons/3dtag.png" alt="" class="tag">
+     <%= image_tag "dots-1.png", class: "dots" %>
+     <%= image_tag "3dtag.png", class: "tag" %>
     <div class="row align-items-center">
       <div class="col-xl-5">
         <div class="team_one__content mb-64 mb-xl-0">
@@ -546,7 +551,7 @@
         <div class="team-slider py-60 ms-2 ms-xl-0">
           <div class="team__card mb-24">
             <div class="team__img_block">
-              <img src="https://uiparadox.co.uk/templates/educate/assets/media/team/Card.png" alt="" class="team_img">
+              <%= image_tag "Card.png", class: "team_img" %>
               <div class="team__content_block">
                 <div class="team__text_block">
                   <h5 class="mb-8"><a href="team-detail.html">Brandy</a></h5>
@@ -556,16 +561,15 @@
                     <li><i class="fal fa-users"></i>PreK-5</li>
                   </ul>
                   <p class="team_info_text mb-24">Specializing in Math, Reading, and ELA for PreK-5th grade students with personalized learning approaches.</p>
-                  <a href="team-detail.html" class="educate-btn mx-auto"><span class="educate-btn__curve"></span>View
-                    Detail</a>
-                  <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/feture-bg-shape.png" alt="" class="text_block_bg_shape">
+                  <a href="team-detail.html" class="educate-btn mx-auto"><span class="educate-btn__curve"></span>View Detail</a>
+                    <%= image_tag "feture-bg-shape.png", class: "text_block_bg_shape" %>
                 </div>
               </div>
             </div>
           </div>
           <div class="team__card mb-24">
             <div class="team__img_block">
-              <img src="https://uiparadox.co.uk/templates/educate/assets/media/team/Card-2.png" alt="" class="team_img">
+               <%= image_tag "feture-bg-shape.png", class: "text_block_bg_shape" %>
               <div class="team__content_block">
                 <div class="team__text_block">
                   <h5 class="mb-8"><a href="team-detail.html">Corie</a></h5>
@@ -575,16 +579,15 @@
                     <li><i class="fal fa-users"></i>PreK-8th</li>
                   </ul>
                   <p class="team_info_text mb-24">Provides comprehensive support in Math, Reading, ELA, and Behavioral support for PreK-8th grade students.</p>
-                  <a href="team-detail.html" class="educate-btn mx-auto"><span class="educate-btn__curve"></span>View
-                    Detail</a>
-                  <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/feture-bg-shape.png" alt="" class="text_block_bg_shape">
+                  <a href="team-detail.html" class="educate-btn mx-auto"><span class="educate-btn__curve"></span>View Detail</a>
+                   <%= image_tag "feture-bg-shape.png", class: "text_block_bg_shape" %>
                 </div>
               </div>
             </div>
           </div>
           <div class="team__card mb-24">
             <div class="team__img_block">
-              <img src="https://uiparadox.co.uk/templates/educate/assets/media/team/Card-3.png" alt="" class="team_img">
+               <%= image_tag "Card-3.png", class: "team_img" %>
               <div class="team__content_block">
                 <div class="team__text_block">
                   <h5 class="mb-8"><a href="team-detail.html">BCBA</a></h5>
@@ -596,14 +599,14 @@
                   <p class="team_info_text mb-24">Design comprehensive treatment plans, conduct assessments, analyze data, and provide clinical oversight and family training.</p>
                   <a href="team-detail.html" class="educate-btn mx-auto"><span class="educate-btn__curve"></span>View
                     Detail</a>
-                  <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/feture-bg-shape.png" alt="" class="text_block_bg_shape">
+                    <%= image_tag "feture-bg-shape.png", class: "text_block_bg_shape" %>
                 </div>
               </div>
             </div>
           </div>
           <div class="team__card mb-24">
             <div class="team__img_block">
-              <img src="https://uiparadox.co.uk/templates/educate/assets/media/team/Card-4.png" alt="" class="team_img">
+              <%= image_tag "feture-bg-shape.png", class: "text_block_bg_shape" %>
               <div class="team__content_block">
                 <div class="team__text_block">
                   <h5 class="mb-8"><a href="team-detail.html">BCaBA</a></h5>
@@ -615,14 +618,14 @@
                   <p class="team_info_text mb-24">Assist BCBAs in implementing behavior programs, collecting data, training staff, and providing direct supervision to RBTs.</p>
                   <a href="team-detail.html" class="educate-btn mx-auto"><span class="educate-btn__curve"></span>View
                     Detail</a>
-                  <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/feture-bg-shape.png" alt="" class="text_block_bg_shape">
+                    <%= image_tag "feture-bg-shape.png", class: "text_block_bg_shape" %>
                 </div>
               </div>
             </div>
           </div>
           <div class="team__card mb-24">
             <div class="team__img_block">
-              <img src="https://uiparadox.co.uk/templates/educate/assets/media/team/Card-5.png" alt="" class="team_img">
+               <%= image_tag "Card-5.png", class: "team_img" %> 
               <div class="team__content_block">
                 <div class="team__text_block">
                   <h5 class="mb-8"><a href="team-detail.html">RBT</a></h5>
@@ -634,7 +637,7 @@
                   <p class="team_info_text mb-24">Provide direct, one-on-one ABA therapy following individualized treatment plans. Implement behavioral strategies and collect data.</p>
                   <a href="team-detail.html" class="educate-btn mx-auto"><span class="educate-btn__curve"></span>View
                     Detail</a>
-                  <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/feture-bg-shape.png" alt="" class="text_block_bg_shape">
+                  <%= image_tag "feture-bg-shape.png", class: "text_block_bg_shape" %>
                 </div>
               </div>
             </div>
@@ -654,8 +657,8 @@
               <div class="title_block mb-16">
                 <h2 class="title">Start Your
                   <span class="fm-sec">First Month Today!
-                    <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/line-vector.png" alt="" class="line_shape">
-                    <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/mic-speaker.png" alt="" class="mic_speaker">
+                   <%= image_tag "line-vector.png", class: "line_shape" %>
+                   <%= image_tag "mic-speaker.png", class: "mic_speaker" %>
                   </span>
                 </h2>
               </div>
@@ -678,7 +681,7 @@
                   <li>00</li>
                 </ul>
               </div>
-              <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/paint-shape.png" alt="" class="paint_shape">
+               <%= image_tag "paint-shape.png", class: "paint_shape" %>
               <ul class="countdown unstyled">
                 <li>
                   <h2>365</h2>
@@ -710,23 +713,23 @@
       <div class="row">
         <div class="col-xl-5">
           <div class="testimonials_text_block">
-            <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/quote3d.png" alt="" class="quote_icon">
+            <%= image_tag "quote3d.png", class: "quote_icon" %>
             <h6 class="color-primary mb-8">–––– Testimonials</h6>
             <h2 class="mb-16">Success Stories! Real Families Share Their <span class="fm-sec">Transformations!</span>
             </h2>
             <p>Creating meaningful change through dedicated professionals, innovative programs, and individualized care plans. Hear from families who have experienced positive outcomes with our evidence-based approach.</p>
-            <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/vector-2.png" alt="" class="vector_hol">
-            <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/dots-1.png" alt="" class="dots_group">
+             <%= image_tag "vector-2.png", class: "vector_hol" %>
+             <%= image_tag "dots-1.png", class: "dots_group" %>
           </div>
         </div>
         <div class="col-xl-7 col-lg-10 offset-xl-0 offset-lg-1">
           <div class="testimonials_slider_1_block">
-            <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/bg-elements-1.png" alt="" class="bg_elements">
+            <%= image_tag "bg-elements-1.png", class: "bg_elements" %>
             <div class="testimonials_slider">
               <div class="card-block">
                 <div class="testimonial_card">
                   <div class="testimonial_card_img_block">
-                    <img src="https://uiparadox.co.uk/templates/educate/assets/media/users/Image.png" alt="" class="user_img">
+                    <%= image_tag "Image.png", class: "user_img" %>
                     <div class="quote_block"></div>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 78 64" fill="none" class="quote_mark">
                       <path
@@ -740,14 +743,14 @@
                           class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
                       <p class="review_text">The ABA therapy program has been life-changing for our family. The individualized approach and data-driven strategies helped my son develop communication skills we never thought possible. The team is incredibly supportive and professional.</p>
                     </div>
-                    <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/bg-elements-2.png" alt="" class="bottom_shape">
+                     <%= image_tag "bg-elements-2.png", class: "bottom_shape" %>
                   </div>
                 </div>
               </div>
               <div class="card-block">
                 <div class="testimonial_card">
                   <div class="testimonial_card_img_block">
-                    <img src="https://uiparadox.co.uk/templates/educate/assets/media/users/Image-1.png" alt="" class="user_img">
+                    <%= image_tag "Image-1.png", class: "user_img" %>
                     <div class="quote_block"></div>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 78 64" fill="none" class="quote_mark">
                       <path
@@ -761,15 +764,14 @@
                           class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
                       <p class="review_text">Brandy's academic tutoring for my daughter has been amazing! She went from struggling with reading to being ahead of her grade level. The personalized attention and monthly family check-ins keep us all aligned and motivated.</p>
                     </div>
-                    <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/bg-elements-2.png" alt="" class="bottom_shape">
-
+                     <%= image_tag "bg-elements-2.png", class: "bottom_shape" %>
                   </div>
                 </div>
               </div>
               <div class="card-block">
                 <div class="testimonial_card">
                   <div class="testimonial_card_img_block">
-                    <img src="https://uiparadox.co.uk/templates/educate/assets/media/users/Image.png" alt="" class="user_img">
+                     <%= image_tag "Image.png", class: "user_img" %>
                     <div class="quote_block"></div>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 78 64" fill="none" class="quote_mark">
                       <path
@@ -783,8 +785,7 @@
                           class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
                       <p class="review_text">The SEL program has transformed our household! My wife and I learned strategies through the Parent Partnership program that have helped our entire family manage emotions better. The meditation sessions have brought us peace and focus.</p>
                     </div>
-                    <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/bg-elements-2.png" alt="" class="bottom_shape">
-
+                    <%= image_tag "bg-elements-2.png", class: "bottom_shape" %>
                   </div>
                 </div>
               </div>
@@ -811,7 +812,7 @@
         <div class="col-lg-4 col-md-6">
           <div class="blog_card mb-24 mb-xl-0">
             <div class="blog_card_img_block">
-              <img src="https://uiparadox.co.uk/templates/educate/assets/media/blog/b-1.png" alt="">
+              <%= image_tag "b-1.png" %>
               <p class="date">15 Jan 2026</p>
             </div>
             <div class="blog_card_text_block">
@@ -819,7 +820,7 @@
               <p class="mb-24">Learn how Applied Behavior Analysis uses evidence-based strategies to create positive behavioral change and support development...</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="author">
-                  <img src="https://uiparadox.co.uk/templates/educate/assets/media/users/u-1.png" alt="">
+                 <%= image_tag "u-1.png" %>
                   <h6 class="dark-gray">BCBA Team</h6>
                 </div>
                 <a href="blog-detail.html" class="h6 color-primary educate_link_btn">Read More<i
@@ -831,7 +832,7 @@
         <div class="col-lg-4 col-md-6">
           <div class="blog_card mb-24 mb-xl-0">
             <div class="blog_card_img_block">
-              <img src="https://uiparadox.co.uk/templates/educate/assets/media/blog/b-2.png" alt="">
+              <%= image_tag "b-2.png" %>
               <p class="date">10 Jan 2026</p>
             </div>
             <div class="blog_card_text_block">
@@ -839,7 +840,7 @@
               <p class="mb-24">Discover how SEL programs help children develop confidence, emotional regulation, and essential social skills...</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="author">
-                  <img src="https://uiparadox.co.uk/templates/educate/assets/media/users/u-2.png" alt="">
+                   <%# <%= image_tag "u-2.png" %>  
                   <h6 class="dark-gray">SEL Specialist</h6>
                 </div>
                 <a href="blog-detail.html" class="h6 color-primary educate_link_btn">Read More<i
@@ -851,7 +852,7 @@
         <div class="col-lg-4 col-md-6">
           <div class="blog_card">
             <div class="blog_card_img_block">
-              <img src="https://uiparadox.co.uk/templates/educate/assets/media/blog/b-3.png" alt="">
+              <%= image_tag "b-2.png" %>
               <p class="date">5 Jan 2026</p>
             </div>
             <div class="blog_card_text_block">
@@ -859,7 +860,7 @@
               <p class="mb-24">How personalized tutoring helps students who haven't met grade-level expectations achieve their full potential...</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="author">
-                  <img src="https://uiparadox.co.uk/templates/educate/assets/media/users/u-3.png" alt="">
+                  <%= image_tag "u-3.png" %>
                   <h6 class="dark-gray">Brandy & Corie</h6>
                 </div>
                 <a href="blog-detail.html" class="h6 color-primary educate_link_btn">Read More<i
@@ -883,15 +884,15 @@
           <a href="mailto:<%=website_detail['email']%>" class="h5 phone_number"><%=website_detail['email']%></a>
         </div>
         <div class="icons">
-          <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/dots-1.png" alt="" class="element-1">
-          <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/vector-3.png" alt="" class="element-2">
-          <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/paint.png" alt="" class="element-3">
-          <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/vector-4.png" alt="" class="element-5">
-          <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/dots-1.png" alt="" class="element-4">
-          <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/tag.png" alt="" class="element-6">
-          <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/errow.png" alt="" class="element-7">
-          <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/circle-lines.png" alt="" class="element-8">
-          <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/mic-speaker.png" alt="" class="element-9">
+          <%= image_tag "dots-1.png", class: "element-1" %>
+          <%= image_tag "vector-3.png", class: "element-2" %>
+          <%= image_tag "paint.png", class: "element-3" %>
+          <%= image_tag "vector-4.png", class: "element-5" %>
+          <%= image_tag "dots-1.png", class: "element-4" %>
+          <%= image_tag "tag.png", class: "element-6" %>
+          <%= image_tag "errow.png", class: "element-7" %>
+          <%= image_tag "circle-lines.png", class: "element-8" %>
+          <%= image_tag "mic-speaker.png", class: "element-9" %>
         </div>
       </div>
     </div>
