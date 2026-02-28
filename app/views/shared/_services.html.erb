@@ -1,0 +1,36 @@
+ <!-- Courses Category Area Start -->
+  <section class="py-60 ">
+    <div class="container">
+      <div class="section-title mb-48">
+        <div class="heading">
+          <h6 class="color-primary mb-8">–––– Our Programs</h6>
+          <h2>Comprehensive Support,<br> Something For <span class="fm-sec">Everyone</span></h2>
+        </div>
+        <a href="courses.html" class="educate-btn d-md-block d-none"><span class="educate-btn__curve"></span>View
+          All</a>
+      </div>
+      <div class="row">
+        <% Service.limit(3).each do |service| %>
+          <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="150ms">
+            <div class="course__category__card_1 mb-24">
+              <div class="course__category__card_text">
+                <a href="courses.html" class="course__category__card_title h4 mb-16"><%=service.title%></a>
+                <p class="mb-40"><%=service.description%></p>
+                <ul class="category__info p-0 mb-8">
+                  <li><i class="fas fa-star"></i>PreK-8th</li>
+                  <li><i class="fal fa-graduation-cap"></i><%=service.total_instructors%> Tutors</li>
+                  <li><i class="fal fa-clock"></i>30-60 min</li>
+                </ul>
+              </div>
+              <%if service.image.attached?%>
+              <img src="<%= url_for(service.image)%>" alt="" class="image">
+              <%else%>
+              <img src="https://uiparadox.co.uk/templates/educate/assets/media/courses/categories/c-1.png" alt="" class="image">
+              <%end%>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </section>
+  <!-- Courses Category Area End -->

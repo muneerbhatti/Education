@@ -1,0 +1,11 @@
+<div class="field-unit__label">
+  <%= f.label field.attribute %>
+</div>
+<div class="field-unit__field">
+  <%= f.file_field field.attribute %>
+  <%#= f.text_field field.attribute %>
+</div>
+<% if field.data.attached? %>
+  <br>
+  <%= image_tag field.data, width: 120 %>
+<% end %>
