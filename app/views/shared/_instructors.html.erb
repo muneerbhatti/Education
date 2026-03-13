@@ -1,0 +1,42 @@
+  <section class="team py-60">
+     <%= image_tag "dots-1.png", class: "dots" %>
+     <%= image_tag "3dtag.png", class: "tag" %>
+    <div class="row align-items-center">
+      <div class="col-xl-5">
+        <div class="team_one__content mb-64 mb-xl-0">
+          <div class="heading mb-16">
+            <h6 class="color-primary mb-8">–––– Our Expert Instructors</h6>
+            <h2>Meet the Certified <br> Professionals Guiding<br> Your <span class="fm-sec">Journey.</span></h2>
+          </div>
+          <p class="mb-24">Our team of certified behavior analysts and trained technicians work collaboratively to design and implement effective intervention programs tailored to each client's needs.</p>
+          <a href="team.html" class="educate-btn"><span class="educate-btn__curve"></span>View All</a>
+        </div>
+      </div>
+      <div class="col-xl-7">
+        <div class="team-slider py-60 ms-2 ms-xl-0">
+          <%Instructor.group(:name).each do |instructor|%>
+            <div class="team__card mb-24">
+              <div class="team__img_block">
+                <%if instructor.image.attached?%>
+                 <img src="<%= url_for(instructor.image)%>" alt="" class="team_img">
+                <%end%>
+                <div class="team__content_block">
+                  <div class="team__text_block">
+                    <h5 class="mb-8"><a href="team-detail.html"><%=instructor.name%></a></h5>
+                    <ul class="team__info unstyled mb-16">
+                      <li><i class="fas fa-star"></i><%=instructor.rating%></li>
+                      <li><i class="fal fa-graduation-cap"></i><%=instructor.designation%></li>
+                      <li><i class="fal fa-users"></i>PreK-5</li>
+                    </ul>
+                    <p class="team_info_text mb-24">Specializing in Math, Reading, and ELA for PreK-5th grade students with personalized learning approaches.</p>
+                    <a href="team-detail.html" class="educate-btn mx-auto"><span class="educate-btn__curve"></span>View Detail</a>
+                      <%= image_tag "feture-bg-shape.png", class: "text_block_bg_shape" %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <%end%>
+        </div>
+      </div>
+    </div>
+  </section>

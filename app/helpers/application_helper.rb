@@ -1,5 +1,5 @@
 module ApplicationHelper
   def website_detail
-    WebsiteDetail.last
+    WebsiteDetail.last&.attributes
   end
 end

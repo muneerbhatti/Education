@@ -32,6 +32,7 @@ services_data = [
   {
     title: "Speech & Language Therapy Services",
     description: "Professional speech and language therapy services to support communication development.",
+    image: 'c-1.png',
     courses: [
       {
         title: "Speech Sound Disorders",
@@ -43,13 +44,15 @@ services_data = [
         assignments: "Weekly Practice Activities",
         price: 40,
         description: "Learn assessment and therapy techniques for articulation and phonological disorders.",
+        image: 'ai2.png',
         instructor: {
           name: "Dr. Sarah Johnson",
           email: "sarah.johnson@example.com",
           designation: "Senior Speech Therapist",
           profile_description: "10+ years of experience in pediatric speech and language therapy.",
           rating: 4.8,
-          specialist: "Speech Sound Disorders"
+          specialist: "Speech Sound Disorders",
+          image: 'Card.png'
         }
       },
       {
@@ -62,13 +65,15 @@ services_data = [
         assignments: "Weekly Assignments",
         price: 55,
         description: "Understand receptive and expressive language disorders with practical intervention strategies.",
+        image: 'ps.png',
         instructor: {
           name: "Dr. Sarah Johnson",
           email: "sarah.johnson@example.com",
           designation: "Senior Speech Therapist",
           profile_description: "10+ years of experience in pediatric speech and language therapy.",
           rating: 4.8,
-          specialist: "Speech Sound Disorders"
+          specialist: "Speech Sound Disorders",
+          image: 'Card.png'
         }
 
       }
@@ -78,6 +83,7 @@ services_data = [
   {
     title: "Occupational Therapy Services",
     description: "Occupational therapy programs focused on functional independence and daily living skills.",
+    image: 'c-1.png',
     courses: [
       {
         title: "Fine Motor Skills Development",
@@ -89,13 +95,15 @@ services_data = [
         assignments: "Weekly Skill Activities",
         price: 45,
         description: "Improve hand coordination, grip strength, and fine motor control.",
+        image: 'ai.png',
         instructor: {
           name: "Dr. Sarah Johnson",
           email: "sarah.johnson@example.com",
           designation: "Senior Speech Therapist",
           profile_description: "10+ years of experience in pediatric speech and language therapy.",
           rating: 4.8,
-          specialist: "Speech Sound Disorders"
+          specialist: "Speech Sound Disorders",
+          image: 'Card-2.png'
         }
       },
       {
@@ -108,13 +116,15 @@ services_data = [
         assignments: "Sensory Plans & Reports",
         price: 60,
         description: "Understand sensory systems and apply integration strategies at home and school.",
+        image: 'ai3.png',
         instructor: {
           name: "Dr. Sarah Johnson",
           email: "sarah.johnson@example.com",
           designation: "Senior Speech Therapist",
           profile_description: "10+ years of experience in pediatric speech and language therapy.",
           rating: 4.8,
-          specialist: "Speech Sound Disorders"
+          specialist: "Speech Sound Disorders",
+          image: 'Card-3.png'
         }
       }
     ]
@@ -123,6 +133,7 @@ services_data = [
   {
     title: "Physical Therapy Services",
     description: "Physical therapy programs to enhance strength, posture, and functional movement.",
+    image: 'c-4.png',
     courses: [
       {
         title: "Gross Motor Skills Development",
@@ -134,13 +145,15 @@ services_data = [
         assignments: "Weekly Exercise Plans",
         price: 45,
         description: "Develop balance, coordination, and movement through guided exercises.",
+        image: 'ai2.png',
         instructor: {
           name: "Dr. Sarah Johnson",
           email: "sarah.johnson@example.com",
           designation: "Senior Speech Therapist",
           profile_description: "10+ years of experience in pediatric speech and language therapy.",
           rating: 4.8,
-          specialist: "Speech Sound Disorders"
+          specialist: "Speech Sound Disorders",
+          image: 'Card-3.png'
         }
       }
     ]
@@ -149,6 +162,7 @@ services_data = [
   {
     title: "Psychological Services",
     description: "Psychological and behavioral support services for emotional well-being.",
+    image: 'c-3.png',
     courses: [
       {
         title: "Emotional & Behavioral Regulation",
@@ -160,13 +174,15 @@ services_data = [
         assignments: "Weekly Reflection Tasks",
         price: 50,
         description: "Learn emotional regulation techniques and behavioral coping strategies.",
+        image: 'ai3.png',
         instructor: {
           name: "Dr. Sarah Johnson",
           email: "sarah.johnson@example.com",
           designation: "Senior Speech Therapist",
           profile_description: "10+ years of experience in pediatric speech and language therapy.",
           rating: 4.8,
-          specialist: "Speech Sound Disorders"
+          specialist: "Speech Sound Disorders",
+          image: 'Card-3.png'
         }
       }
     ]
@@ -175,6 +191,7 @@ services_data = [
   {
     title: "ABA Therapy Services",
     description: "Applied Behavior Analysis therapy programs for skill development and behavior support.",
+    image: 'c-5.png',
     courses: [
       {
         title: "Introduction to ABA Therapy",
@@ -186,13 +203,15 @@ services_data = [
         assignments: "Behavior Tracking Sheets",
         price: 45,
         description: "Foundational principles and ethical practices of ABA therapy.",
+        image: 'ai2.png',
         instructor: {
           name: "Dr. Sarah Johnson",
           email: "sarah.johnson@example.com",
           designation: "Senior Speech Therapist",
           profile_description: "10+ years of experience in pediatric speech and language therapy.",
           rating: 4.8,
-          specialist: "Speech Sound Disorders"
+          specialist: "Speech Sound Disorders",
+          image: 'Card-3.png'
         }
       }
     ]
@@ -201,6 +220,7 @@ services_data = [
   {
     title: "Bilingual & Virtual Therapy Services",
     description: "Language and therapy services delivered bilingually and through virtual platforms.",
+    image: 'c-6.png',
     courses: [
       {
         title: "Bilingual Speech & Language Development",
@@ -212,13 +232,15 @@ services_data = [
         assignments: "Language Practice Activities",
         price: 50,
         description: "Support multilingual language development using evidence-based strategies.",
+        image: 'ai2.png',
         instructor: {
           name: "Dr. Sarah Johnson",
           email: "sarah.johnson@example.com",
           designation: "Senior Speech Therapist",
           profile_description: "10+ years of experience in pediatric speech and language therapy.",
           rating: 4.8,
-          specialist: "Speech Sound Disorders"
+          specialist: "Speech Sound Disorders",
+          image: 'Card-3.png'
         }
       },
       {
@@ -231,13 +253,15 @@ services_data = [
         assignments: "Online Session Practice",
         price: 35,
         description: "Learn best practices for delivering effective teletherapy sessions.",
+        image: 'ai3.png',
         instructor: {
           name: "Dr. Sarah Johnson",
           email: "sarah.johnson@example.com",
           designation: "Senior Speech Therapist",
           profile_description: "10+ years of experience in pediatric speech and language therapy.",
           rating: 4.8,
-          specialist: "Speech Sound Disorders"
+          specialist: "Speech Sound Disorders",
+          image: 'Card-3.png'
         }
       }
     ]
@@ -249,6 +273,14 @@ puts "Seeding Services, Courses & Instructors..."
 services_data.each do |service_data|
   service = Service.find_or_create_by!(title: service_data[:title]) do |s|
     s.description = service_data[:description]
+  end
+  image_path = Rails.root.join("app/assets/images/#{service_data[:image]}")
+  if File.exist?(image_path)
+    service.image.attach(
+      io: File.open(image_path),
+      filename: service_data[:image],
+      content_type: Marcel::MimeType.for(Pathname.new(image_path))
+    )
   end
 
   service_data[:courses].each do |course_data|
@@ -265,10 +297,18 @@ services_data.each do |service_data|
       c.price = course_data[:price]
       c.description = course_data[:description]
     end
+    image_path = Rails.root.join("app/assets/images/#{course_data[:image]}")
+    if File.exist?(image_path)
+      course.image.attach(
+        io: File.open(image_path),
+        filename: course_data[:image],
+        content_type: Marcel::MimeType.for(Pathname.new(image_path))
+      )
+    end
 
     # Create Instructor (one per course)
     if course_data[:instructor]
-      Instructor.find_or_create_by!(
+      instructor = Instructor.find_or_create_by!(
         email: course_data[:instructor][:email],
         course: course
       ) do |i|
@@ -277,6 +317,14 @@ services_data.each do |service_data|
         i.profile_description = course_data[:instructor][:profile_description]
         i.rating = course_data[:instructor][:rating]
         i.specialist = course_data[:instructor][:specialist]
+      end
+      image_path = Rails.root.join("app/assets/images/#{course_data[:instructor][:image]}")
+      if File.exist?(image_path)
+        instructor.image.attach(
+          io: File.open(image_path),
+          filename: course_data[:instructor][:image],
+          content_type: Marcel::MimeType.for(Pathname.new(image_path))
+        )
       end
     end
   end

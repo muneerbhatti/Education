@@ -1,0 +1,54 @@
+  <section class="courses-1 py-60">
+    <div class="container">
+      <div class="section-title mb-48">
+        <div class="heading">
+          <h6 class="color-primary mb-8">–––– Popular Courses</h6>
+          <h2>Programs Designed <br> By <span class="fm-sec">Experts</span></h2>
+        </div>
+        <a href="courses.html" class="educate-btn d-md-block d-none"><span class="educate-btn__curve"></span>View
+          All</a>
+      </div>
+    </div>
+    <div class="courses-slider">
+      <%Course.all.each do |course| %>
+        <!-- Slide Item  -->
+        <div class="course__card mb-24">
+          <div class="course__card__icon">
+            <%if course.image.attached?%>
+              <img src="<%= url_for(course.image)%>" alt="" class="image">
+            <%end%>
+          </div>
+          <div class="course__card__content">
+            <div class="left__block">
+              <%=image_tag 'tag-1.png', class: 'course_tag'%>
+              <h4 class="mb-4p"><a href="course-detail.html"><%=course.title%></a></h4>
+              <p class="h6 mb-24"><%=course.category%></p>
+              <ul class="course_info p-0 mb-32">
+                <li><i class="fal fa-presentation"></i><%=course.videos_count%> Videos</li>
+                <li><i class="fal fa-clock"></i><%=course.total_hours%> hours</li>
+              </ul>
+              <div class="author_card">
+                <%= image_tag "a-1.png",class:"author_img" %>
+                <div class="author_text_block">
+                  <a href="team-detail.html" class="h6 mb-4p"><%=course.instructor&.name%></a>
+                  <p><%=course.instructor&.designation%></p>
+                </div>
+              </div>
+            </div>
+            <div class="right__block">
+              <div class="price_block mb-16">
+                <div class="price_vector">
+                  <%= image_tag "vector-group.png"%>
+                </div>
+                <span class="h3 color-white">$<%=course.price%></span>
+              </div>
+              <a href="course-detail.html" class="educate-btn sm mx-xl-auto me-2"><span
+                  class="educate-btn__curve"></span>Enroll Now</a>
+            </div>
+            <%= image_tag "vector-1.png", class:"bottom_vector"%>
+          </div>
+        </div>
+        <!-- Slide item  -->
+      <%end%>
+    </div>
+  </section>

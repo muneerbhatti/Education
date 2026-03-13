@@ -3,14 +3,14 @@
     <div class="container">
       <div class="section-title mb-48">
         <div class="heading">
-          <h6 class="color-primary mb-8">–––– Our Programs</h6>
+          <h6 class="color-primary mb-8">–––– Our Services</h6>
           <h2>Comprehensive Support,<br> Something For <span class="fm-sec">Everyone</span></h2>
         </div>
         <a href="courses.html" class="educate-btn d-md-block d-none"><span class="educate-btn__curve"></span>View
           All</a>
       </div>
       <div class="row">
-        <% Service.limit(3).each do |service| %>
+        <% Service.all.each do |service| %>
           <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="150ms">
             <div class="course__category__card_1 mb-24">
               <div class="course__category__card_text">
@@ -25,7 +25,7 @@
               <%if service.image.attached?%>
               <img src="<%= url_for(service.image)%>" alt="" class="image">
               <%else%>
-              <img src="https://uiparadox.co.uk/templates/educate/assets/media/courses/categories/c-1.png" alt="" class="image">
+              <%= image_tag "c-2.png", class:"image"%>
               <%end%>
             </div>
           </div>
