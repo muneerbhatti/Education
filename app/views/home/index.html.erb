@@ -17,7 +17,7 @@
         <div class="text_block wow fadeInUp" data-wow-delay="800ms">
           <div class="row">
             <div class="col-xl-6 col-lg-8">
-              <%= image_tag "tag.png" , class:"mb-24 tag wow slideInDown",data: { wow_delay: "550ms" } %>            
+              <%= image_tag "tag.png" , class:"mb-24 tag wow slideInDown",data: { wow_delay: "550ms" } %>
               <h1 class="mb-16 title">
                 Empowering Lives Through <span class="fm-sec">ABA Therapy!
                   <%=image_tag "rocket.png", class:"rocket wow zoomIn",data: { wow_delay:"700ms"} %>
@@ -32,8 +32,8 @@
               </div>
               <div class="video-btn wow zoomIn" data-wow-delay="700ms">
                 <%=image_tag "round-text.png", class:"text-vector" %>
-                
-                <a href="https://www.youtube.com/watch?v=8nXX1WOuvrk" class="play-btn video-popup">
+
+                <a href="#" class="play-btn video-popup">
                   <i class="fas fa-play"></i>
                 </a>
               </div>
@@ -45,11 +45,11 @@
         <div class="card_block">
           <h6 class="mb-4p">Evidence-Based Care</h6>
           <p>Backed by Proven ABA Methodologies</p>
-          <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/target-2.png" alt="" class="target_icon">
+          <%=image_tag "target-2.png", class:"target_icon" %>
         </div>
       </div>
       <%= image_tag "main-img.png", class:"main-img" %>
-      
+
     </div>
   </section>
   <!-- Hero Banner End -->
@@ -61,7 +61,7 @@
         <div class="col-xl-3 col-sm-6 wow fadeInUp" data-wow-delay="200ms">
           <div class="feature__card mb-24 mb-xl-0">
             <div class="feature__icon">
-              <img src="https://uiparadox.co.uk/templates/educate/assets/media/icons/Pricing.png" alt="">
+              <%= image_tag "Pricing.png", class:"" %>
             </div>
             <div class="feature__content">
               <h5 class="mb-8">Individualized Plans</h5>
@@ -75,7 +75,7 @@
           <div class="feature__card mb-24 mb-xl-0">
             <div class="feature__icon">
                <%= image_tag "Quality.png"%>
-              
+
             </div>
             <div class="feature__content">
               <h5 class="mb-8">Certified Professionals</h5>
@@ -101,7 +101,7 @@
         <div class="col-xl-3 col-sm-6 wow fadeInUp" data-wow-delay="800ms">
           <div class="feature__card">
             <div class="feature__icon">
-              <img src="https://uiparadox.co.uk/templates/educate/assets/media/icons/Support.png" alt="">
+              <%=image_tag "Support.png"%>
             </div>
             <div class="feature__content">
               <h5 class="mb-8">Family Support</h5>
@@ -197,455 +197,19 @@
       </div>
       <div class="brand">
         <%=image_tag "barnd-6.png"%>
-        
+
       </div>
     </div>
   </div>
   <!-- Brands Area End -->
-
- <!-- Courses Category Area Start -->
-  <section class="py-60 ">
-    <div class="container">
-      <div class="section-title mb-48">
-        <div class="heading">
-          <h6 class="color-primary mb-8">–––– Our Programs</h6>
-          <h2>Comprehensive Support,<br> Something For <span class="fm-sec">Everyone</span></h2>
-        </div>
-        <a href="courses.html" class="educate-btn d-md-block d-none"><span class="educate-btn__curve"></span>View
-          All</a>
-      </div>
-      <div class="row">
-        <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="150ms">
-          <div class="course__category__card_1 mb-24">
-            <div class="course__category__card_text">
-              <a href="courses.html" class="course__category__card_title h4 mb-16">Academic Tutoring</a>
-              <p class="mb-40">PreK-8th grade support in Math, Reading, and ELA. Tailored tutoring for students who have not met grade-level expectations.</p>
-              <ul class="category__info p-0 mb-8">
-                <li><i class="fas fa-star"></i>PreK-8th</li>
-                <li><i class="fal fa-graduation-cap"></i>2 Tutors</li>
-                <li><i class="fal fa-clock"></i>30-60 min</li>
-              </ul>
-            </div>
-            <img src="https://uiparadox.co.uk/templates/educate/assets/media/courses/categories/c-1.png" alt="" class="image">
-          </div>
-        </div>
-        <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="300ms">
-          <div class="course__category__card_1 mb-24">
-            <div class="course__category__card_text">
-              <a href="courses.html" class="course__category__card_title h4 mb-16">SEL Programs</a>
-              <p class="mb-40">Social-Emotional Learning programs for students, parents, and teachers to build confidence and life skills.</p>
-              <ul class="category__info p-0 mb-8">
-                <li><i class="fas fa-star"></i>All Ages</li>
-                <li><i class="fal fa-users"></i>3 Programs</li>
-                <li><i class="fal fa-clock"></i>45-60 min</li>
-              </ul>
-            </div>
-            <%= image_tag "c-2.png", class:"image"%>
-          </div>
-        </div>
-        <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="450ms">
-          <div class="course__category__card_1 mb-24">
-            <div class="course__category__card_text">
-              <a href="courses.html" class="course__category__card_title h4 mb-16">Meditation</a>
-              <p class="mb-40">Mindfulness and meditation programs for students, parents, and teachers to promote peace and focus.</p>
-              <ul class="category__info p-0 mb-8">
-                <li><i class="fas fa-star"></i>All Ages</li>
-                <li><i class="fal fa-users"></i>3 Programs</li>
-                <li><i class="fal fa-clock"></i>20-30 min</li>
-              </ul>
-            </div>
-            <%=image_tag "c-4.png", class:"image"%>
-          </div>
-        </div>
-        <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="600ms">
-          <div class="course__category__card_1 mb-24 mb-xl-0">
-            <div class="course__category__card_text">
-              <a href="courses.html" class="course__category__card_title h4 mb-16">IEP Support</a>
-              <p class="mb-40">Supplemental enrichment tutoring for students with IEPs, designed to extend learning while supporting IEP goals.</p>
-              <ul class="category__info p-0 mb-8">
-                <li><i class="fas fa-star"></i>PreK-8th</li>
-                <li><i class="fal fa-graduation-cap"></i>Specialized</li>
-                <li><i class="fal fa-clock"></i>45-60 min</li>
-              </ul>
-            </div>
-            <%=image_tag "barnd-2.png"%>
-          </div>
-        </div>
-        <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="750ms">
-          <div class="course__category__card_1 mb-24 mb-xl-0">
-            <div class="course__category__card_text">
-              <a href="courses.html" class="course__category__card_title h4 mb-16">Behavioral Support</a>
-              <p class="mb-40">PreK-8th grade behavioral support alongside academic tutoring to address learning and behavioral challenges.</p>
-              <ul class="category__info p-0 mb-8">
-                <li><i class="fas fa-star"></i>PreK-8th</li>
-                <li><i class="fal fa-graduation-cap"></i>Specialist</li>
-                <li><i class="fal fa-clock"></i>45-60 min</li>
-              </ul>
-            </div>
-            <%=image_tag "c-5.png", class:"image" %>
-          </div>
-        </div>
-        <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="900ms">
-          <div class="course__category__card_1 mb-24 mb-xl-0">
-            <div class="course__category__card_text">
-              <a href="courses.html" class="course__category__card_title h4 mb-16">Bundle Packages</a>
-              <p class="mb-40">Comprehensive support bundles combining academic tutoring, SEL, and meditation for students, families, and teachers.</p>
-              <ul class="category__info p-0 mb-8">
-                <li><i class="fas fa-star"></i>All Ages</li>
-                <li><i class="fal fa-users"></i>3 Bundles</li>
-                <li><i class="fal fa-clock"></i>Multiple</li>
-              </ul>
-            </div>
-            <%= image_tag "c-6.png",class:"image"%>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Courses Category Area End -->
+  <%=render 'shared/services'%>
 
   <!-- Courses Area Start -->
-  <section class="courses-1 py-60">
-    <div class="container">
-      <div class="section-title mb-48">
-        <div class="heading">
-          <h6 class="color-primary mb-8">–––– Popular Packages</h6>
-          <h2>Programs Designed <br> By <span class="fm-sec">Experts</span></h2>
-        </div>
-        <a href="courses.html" class="educate-btn d-md-block d-none"><span class="educate-btn__curve"></span>View
-          All</a>
-      </div>
-    </div>
-    <div class="courses-slider">
-      <!-- Slide Item  -->
-      <div class="course__card mb-24">
-        <div class="course__card__icon">
-          <%= image_tag "ps.png"%>
-        </div>
-        <div class="course__card__content">
-          <div class="left__block">
-            <img src="https://uiparadox.co.uk/templates/educate/assets/media/courses/tag-1.png" alt="" class="course_tag">
-            <h4 class="mb-4p"><a href="course-detail.html">Starter Support</a></h4>
-            <p class="h6 mb-24">Academic Tutoring</p>
-            <ul class="course_info p-0 mb-32">
-              <li><i class="fal fa-presentation"></i>4 Sessions/Month</li>
-              <li><i class="fal fa-clock"></i>30-45 min</li>
-            </ul>
-            <div class="author_card">
-              <%= image_tag "a-1.png",class:"author_img" %>
-              <div class="author_text_block">
-                <a href="team-detail.html" class="h6 mb-4p">Brandy</a>
-                <p>PreK-5 Tutor</p>
-              </div>
-            </div>
-          </div>
-          <div class="right__block">
-            <div class="price_block mb-16">
-              <div class="price_vector">
-                <%= image_tag "vector-group.png"%>
-              </div>
-              <span class="h3 color-white">$240</span>
-            </div>
-            <a href="course-detail.html" class="educate-btn sm mx-xl-auto me-2"><span
-                class="educate-btn__curve"></span>Enroll Now</a>
-          </div>
-          <%= image_tag "vector-1.png", class:"bottom_vector"%>
-        </div>
-      </div>
-      <!-- Slide item  -->
-      <div class="course__card mb-24">
-        <div class="course__card__icon">
-          <%= image_tag "ai.png" %>
-        </div>
-        <div class="course__card__content">
-          <div class="left__block">
-            <%= image_tag "tag-2.png",class:"course_tag"%>
-            <h4 class="mb-4p"><a href="course-detail.html">Momentum Builder</a></h4>
-            <p class="h6 mb-24">Academic Tutoring</p>
-            <ul class="course_info p-0 mb-32">
-              <li><i class="fal fa-presentation"></i>8 Sessions/Month</li>
-              <li><i class="fal fa-clock"></i>45-60 min</li>
-            </ul>
-            <div class="author_card">
-              <%= image_tag "a-2.png",class:"author_img" %>
-              <div class="author_text_block">
-                <a href="team-detail.html" class="h6 mb-4p">Corie</a>
-                <p>PreK-8 Tutor</p>
-              </div>
-            </div>
-          </div>
-          <div class="right__block">
-            <div class="price_block mb-16">
-              <div class="price_vector">
-                <%= image_tag "vector-group.png"%>
-              </div>
-              <span class="h3 color-white">$560</span>
-            </div>
-            <a href="course-detail.html" class="educate-btn sm mx-xl-auto me-2"><span
-                class="educate-btn__curve"></span>Enroll Now</a>
-          </div>
-          <%= image_tag "vector-1.png", class:"bottom_vector"%>
-        </div>
-      </div>
-      <!-- Slide item  -->
-      <div class="course__card mb-24">
-        <div class="course__card__icon">
-           <%= image_tag "desktop.png"%> 
-        </div>
-        <div class="course__card__content">
-          <div class="left__block">
-            <%= image_tag "tag-1.png", class: "course_tag" %>
-            <h4 class="mb-4p"><a href="course-detail.html">Calm & Confident</a></h4>
-            <p class="h6 mb-24">SEL for Students</p>
-            <ul class="course_info p-0 mb-32">
-              <li><i class="fal fa-presentation"></i>4 Sessions/Month</li>
-              <li><i class="fal fa-clock"></i>45 min</li>
-            </ul>
-            <div class="author_card">
-              <%= image_tag "c-3.png", class:"author_img"%>
-              <div class="author_text_block">
-                <a href="team-detail.html" class="h6 mb-4p">SEL Specialist</a>
-                <p>Student Support</p>
-              </div>
-            </div>
-          </div>
-          <div class="right__block">
-            <div class="price_block mb-16">
-              <div class="price_vector">
-                <%= image_tag "vector-group.png"%>
-              </div>
-              <span class="h3 color-white">$360</span>
-            </div>
-            <a href="course-detail.html" class="educate-btn sm mx-xl-auto me-2"><span
-                class="educate-btn__curve"></span>Enroll Now</a>
-          </div>
-          <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/vector-1.png" alt="" class="bottom_vector">
-        </div>
-      </div>
-      <!-- Slide item  -->
-      <div class="course__card mb-24">
-        <div class="course__card__icon">
-          <%= image_tag "figma.png"%>
-        </div>
-        <div class="course__card__content">
-          <div class="left__block">
-            <%= image_tag "tag-2.png", class:"course_tag"%>
-            <h4 class="mb-4p"><a href="course-detail.html">Parent Partnership SEL</a></h4>
-            <p class="h6 mb-24">SEL for Parents</p>
-            <ul class="course_info p-0 mb-32">
-              <li><i class="fal fa-presentation"></i>2 Sessions/Month</li>
-              <li><i class="fal fa-clock"></i>60 min</li>
-            </ul>
-            <div class="author_card">
-              <%= image_tag "a-4.png", class:"author_img"%>
-              <div class="author_text_block">
-                <a href="team-detail.html" class="h6 mb-4p">SEL Specialist</a>
-                <p>Parent Support</p>
-              </div>
-            </div>
-          </div>
-          <div class="right__block">
-            <div class="price_block mb-16">
-              <div class="price_vector">
-                <%= image_tag "vector-group.png"%>
-              </div>
-              <span class="h3 color-white">$220</span>
-            </div>
-            <a href="course-detail.html" class="educate-btn sm mx-xl-auto me-2"><span
-                class="educate-btn__curve"></span>Enroll Now</a>
-          </div>
-          <%= image_tag "vector-1.png",class:"bottom_vector"%>
-        </div>
-      </div>
-      <!-- Slide item  -->
-      <div class="course__card mb-24">
-        <div class="course__card__icon">
-           <%= image_tag "ai2.png" %>
-        </div>
-        <div class="course__card__content">
-          <div class="left__block">
-           <%= image_tag "tag-1.png", class: "course_tag" %>
-            <h4 class="mb-4p"><a href="course-detail.html">Mindful Learners</a></h4>
-            <p class="h6 mb-24">Meditation for Students</p>
-            <ul class="course_info p-0 mb-32">
-              <li><i class="fal fa-presentation"></i>4 Sessions/Month</li>
-              <li><i class="fal fa-clock"></i>20-30 min</li>
-            </ul>
-            <div class="author_card">
-              <%= image_tag "a-5.png", class: "author_img" %>
-              <div class="author_text_block">
-                <a href="team-detail.html" class="h6 mb-4p">Meditation Coach</a>
-                <p>Student Focus</p>
-              </div>
-            </div>
-          </div>
-          <div class="right__block">
-            <div class="price_block mb-16">
-              <div class="price_vector">
-                 <%= image_tag "vector-group.png" %>
-              </div>
-              <span class="h3 color-white">$160</span>
-            </div>
-            <a href="course-detail.html" class="educate-btn sm mx-xl-auto me-2"><span
-                class="educate-btn__curve"></span>Enroll Now</a>
-          </div>
-          <%= image_tag "vector-1.png", class: "bottom_vector" %>
-        </div>
-      </div>
-      <!-- Slide item  -->
-      <div class="course__card mb-24">
-        <div class="course__card__icon">
-           <%# <%= image_tag "ai3.png" %> 
-        </div>
-        <div class="course__card__content">
-          <div class="left__block">
-             <%= image_tag "tag-2.png", class: "course_tag" %>
-            <h4 class="mb-4p"><a href="course-detail.html">Student Success Bundle</a></h4>
-            <p class="h6 mb-24">Academic + SEL Bundle</p>
-            <ul class="course_info p-0 mb-32">
-              <li><i class="fal fa-presentation"></i>10 Sessions/Month</li>
-              <li><i class="fal fa-clock"></i>45 min</li>
-            </ul>
-            <div class="author_card">
-              <%= image_tag "a-6.png", class: "author_img" %>
-              <div class="author_text_block">
-                <a href="team-detail.html" class="h6 mb-4p">Team Package</a>
-                <p>Complete Support</p>
-              </div>
-            </div>
-          </div>
-          <div class="right__block">
-            <div class="price_block mb-16">
-              <%= image_tag "vector-1.png", class: "bottom_vector" %>
-              <div class="price_vector">
-                <img src="https://uiparadox.co.uk/templates/educate/assets/media/shapes/vector-group.png" alt="">
-              </div>
-              <span class="h3 color-white">$740</span>
-            </div>
-            <a href="course-detail.html" class="educate-btn sm mx-xl-auto me-2"><span
-                class="educate-btn__curve"></span>Enroll Now</a>
-          </div>
-           <%= image_tag "vector-1.png", class: "bottom_vector" %>
-        </div>
-      </div>
-    </div>
-  </section>
+   <%=render 'shared/courses'%>
   <!-- Courses Area End -->
 
   <!-- Team Area Start -->
-  <section class="team py-60">
-     <%= image_tag "dots-1.png", class: "dots" %>
-     <%= image_tag "3dtag.png", class: "tag" %>
-    <div class="row align-items-center">
-      <div class="col-xl-5">
-        <div class="team_one__content mb-64 mb-xl-0">
-          <div class="heading mb-16">
-            <h6 class="color-primary mb-8">–––– Our Expert Team</h6>
-            <h2>Meet the Certified <br> Professionals Guiding<br> Your <span class="fm-sec">Journey.</span></h2>
-          </div>
-          <p class="mb-24">Our team of certified behavior analysts and trained technicians work collaboratively to design and implement effective intervention programs tailored to each client's needs.</p>
-          <a href="team.html" class="educate-btn"><span class="educate-btn__curve"></span>View All</a>
-        </div>
-      </div>
-      <div class="col-xl-7">
-        <div class="team-slider py-60 ms-2 ms-xl-0">
-          <div class="team__card mb-24">
-            <div class="team__img_block">
-              <%= image_tag "Card.png", class: "team_img" %>
-              <div class="team__content_block">
-                <div class="team__text_block">
-                  <h5 class="mb-8"><a href="team-detail.html">Brandy</a></h5>
-                  <ul class="team__info unstyled mb-16">
-                    <li><i class="fas fa-star"></i>5</li>
-                    <li><i class="fal fa-graduation-cap"></i>Academic Tutor</li>
-                    <li><i class="fal fa-users"></i>PreK-5</li>
-                  </ul>
-                  <p class="team_info_text mb-24">Specializing in Math, Reading, and ELA for PreK-5th grade students with personalized learning approaches.</p>
-                  <a href="team-detail.html" class="educate-btn mx-auto"><span class="educate-btn__curve"></span>View Detail</a>
-                    <%= image_tag "feture-bg-shape.png", class: "text_block_bg_shape" %>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="team__card mb-24">
-            <div class="team__img_block">
-               <%= image_tag "feture-bg-shape.png", class: "text_block_bg_shape" %>
-              <div class="team__content_block">
-                <div class="team__text_block">
-                  <h5 class="mb-8"><a href="team-detail.html">Corie</a></h5>
-                  <ul class="team__info unstyled mb-16">
-                    <li><i class="fas fa-star"></i>5</li>
-                    <li><i class="fal fa-graduation-cap"></i>Academic Specialist</li>
-                    <li><i class="fal fa-users"></i>PreK-8th</li>
-                  </ul>
-                  <p class="team_info_text mb-24">Provides comprehensive support in Math, Reading, ELA, and Behavioral support for PreK-8th grade students.</p>
-                  <a href="team-detail.html" class="educate-btn mx-auto"><span class="educate-btn__curve"></span>View Detail</a>
-                   <%= image_tag "feture-bg-shape.png", class: "text_block_bg_shape" %>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="team__card mb-24">
-            <div class="team__img_block">
-               <%= image_tag "Card-3.png", class: "team_img" %>
-              <div class="team__content_block">
-                <div class="team__text_block">
-                  <h5 class="mb-8"><a href="team-detail.html">BCBA</a></h5>
-                  <ul class="team__info unstyled mb-16">
-                    <li><i class="fas fa-certificate"></i>Certified</li>
-                    <li><i class="fal fa-graduation-cap"></i>Behavior Analyst</li>
-                    <li><i class="fal fa-brain"></i>Doctoral/Master</li>
-                  </ul>
-                  <p class="team_info_text mb-24">Design comprehensive treatment plans, conduct assessments, analyze data, and provide clinical oversight and family training.</p>
-                  <a href="team-detail.html" class="educate-btn mx-auto"><span class="educate-btn__curve"></span>View
-                    Detail</a>
-                    <%= image_tag "feture-bg-shape.png", class: "text_block_bg_shape" %>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="team__card mb-24">
-            <div class="team__img_block">
-              <%= image_tag "feture-bg-shape.png", class: "text_block_bg_shape" %>
-              <div class="team__content_block">
-                <div class="team__text_block">
-                  <h5 class="mb-8"><a href="team-detail.html">BCaBA</a></h5>
-                  <ul class="team__info unstyled mb-16">
-                    <li><i class="fas fa-certificate"></i>Certified</li>
-                    <li><i class="fal fa-graduation-cap"></i>Assistant Analyst</li>
-                    <li><i class="fal fa-brain"></i>Bachelor Level</li>
-                  </ul>
-                  <p class="team_info_text mb-24">Assist BCBAs in implementing behavior programs, collecting data, training staff, and providing direct supervision to RBTs.</p>
-                  <a href="team-detail.html" class="educate-btn mx-auto"><span class="educate-btn__curve"></span>View
-                    Detail</a>
-                    <%= image_tag "feture-bg-shape.png", class: "text_block_bg_shape" %>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="team__card mb-24">
-            <div class="team__img_block">
-               <%= image_tag "Card-5.png", class: "team_img" %> 
-              <div class="team__content_block">
-                <div class="team__text_block">
-                  <h5 class="mb-8"><a href="team-detail.html">RBT</a></h5>
-                  <ul class="team__info unstyled mb-16">
-                    <li><i class="fas fa-certificate"></i>Registered</li>
-                    <li><i class="fal fa-graduation-cap"></i>Behavior Technician</li>
-                    <li><i class="fal fa-hands-helping"></i>Direct Care</li>
-                  </ul>
-                  <p class="team_info_text mb-24">Provide direct, one-on-one ABA therapy following individualized treatment plans. Implement behavioral strategies and collect data.</p>
-                  <a href="team-detail.html" class="educate-btn mx-auto"><span class="educate-btn__curve"></span>View
-                    Detail</a>
-                  <%= image_tag "feture-bg-shape.png", class: "text_block_bg_shape" %>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <%= render 'shared/instructors'%>
   <!-- Team Area End -->
 
   <!-- Discount Banner Area Start -->
@@ -840,7 +404,7 @@
               <p class="mb-24">Discover how SEL programs help children develop confidence, emotional regulation, and essential social skills...</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="author">
-                   <%# <%= image_tag "u-2.png" %>  
+                   <%# <%= image_tag "u-2.png" %>
                   <h6 class="dark-gray">SEL Specialist</h6>
                 </div>
                 <a href="blog-detail.html" class="h6 color-primary educate_link_btn">Read More<i
@@ -881,7 +445,7 @@
         <h2 class="mb-8 color-white">Have Questions About <br><span class="fm-sec">Our Programs?</span></h2>
         <p class="mb-16 color-white">We're here to help! Contact us for more information about ABA therapy, tutoring, SEL, or meditation programs.</p>
         <div class="mx-auto">
-          <a href="mailto:<%=website_detail['email']%>" class="h5 phone_number"><%=website_detail['email']%></a>
+          <a href="mailto:<%=website_detail&.dig('email')%>" class="h5 phone_number"><%=website_detail&.dig('email')%></a>
         </div>
         <div class="icons">
           <%= image_tag "dots-1.png", class: "element-1" %>

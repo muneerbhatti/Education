@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
   namespace :admin do
     resources :website_details
+    resources :services
+    resources :courses
+    resources :instructors
       # root to: "services#index"
   end
   root "home#index"
