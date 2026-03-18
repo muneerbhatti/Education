@@ -1,51 +1,38 @@
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <!-- Login Area Start -->
-        <section class="form_page">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-6">
-                        <div class="form_block">
-                            <div class="text_block">
-                                <!--<a href="index.html" class="educate_link_btn color-primary h6 mb-48"><i
-                                        class="far fa-chevron-left"></i> Back To Home</a>-->
-                                <div class="title">
-                                    <%=image_tag 'mic-speaker.png', class: 'speaker_icon'%>
-                                    <h2 class="mb-48">Login</h2>
-                                </div>
-                                <!--<div class="row">
-                                    <div class="col-sm-6">
-                                        <a href="" class="link-btn h6 mb-24"><img
-                                                src="assets/media/icons/brands/google.png" alt="">Log in with Google</a>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <a href="" class="link-btn h6 mb-24"><img
-                                                src="assets/media/icons/brands/facebook-icon.png" alt="">Log in with
-                                            Facebook</a>
-                                    </div>
-                                </div>
-                                <h5 class="or mb-4p">or</h5>  -->
-                                <div class="text-center">
-                                    <h6 class="mb-24">Login with your email address</h6>
-                                </div>
-                                <form action="login.html" class="form-validator">
-                                    <div class="mb-24">
-                                        <%= f.email_field :email, autofocus: true, autocomplete: "email" , class: 'form-control p_lg', placeholder: 'Your email'%>
-                                    </div>
-                                    <div class="mb-24">
-                                        <%= f.password_field :password, autocomplete: "current-password" ,class: 'form-control p_lg', placeholder: 'Password'%>
-                                    </div>
-                                    <button type="submit" class="b-unstyle educate-btn w-100 mb-24"><span
-                                            class="educate-btn__curve"></span>Login</button>
-                                </form>
-                                <div class="bottom-row">
-                                  <%= render "devise/shared/links" %>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <div class="text_block">
+        <!--<a href="index.html" class="educate_link_btn color-primary h6 mb-48"><i
+                class="far fa-chevron-left"></i> Back To Home</a>-->
+        <div class="title">
+            <%=image_tag 'mic-speaker.png', class: 'speaker_icon'%>
+            <h2 class="mb-48">Login</h2>
+        </div>
+        <!--<div class="row">
+            <div class="col-sm-6">
+                <a href="" class="link-btn h6 mb-24"><img
+                        src="assets/media/icons/brands/google.png" alt="">Log in with Google</a>
             </div>
-
-        </section>
-        <!-- Login Area End -->
+            <div class="col-sm-6">
+                <a href="" class="link-btn h6 mb-24"><img
+                        src="assets/media/icons/brands/facebook-icon.png" alt="">Log in with
+                    Facebook</a>
+            </div>
+        </div>
+        <h5 class="or mb-4p">or</h5>  -->
+        <div class="text-center">
+            <h6 class="mb-24">Login with your email address</h6>
+        </div>
+        <form action="login.html" class="form-validator">
+            <div class="mb-24">
+                <%= f.email_field :email, autofocus: true, autocomplete: "email" , class: 'form-control p_lg', placeholder: 'Your email'%>
+            </div>
+            <div class="mb-24">
+                <%= f.password_field :password, autocomplete: "current-password" ,class: 'form-control p_lg', placeholder: 'Password'%>
+            </div>
+            <button type="submit" class="b-unstyle educate-btn w-100 mb-24"><span
+                    class="educate-btn__curve"></span>Login</button>
+        </form>
+        <div class="bottom-row">
+            <%= render "devise/shared/links" %>
+        </div>
+    </div>
 <% end %>
