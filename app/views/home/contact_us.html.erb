@@ -80,7 +80,7 @@
                         <div class="icon">
                             <i class="fal fa-map-marker-alt"></i>
                         </div>
-                        <h6 class="dark-gray">Kaleidoscope Kollege, Islamabad, Pakistan</h6>
+                        <h6 class="dark-gray"><%=website_detail&.dig('address_1')%></h6>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -88,7 +88,7 @@
                         <div class="icon">
                             <i class="fal fa-phone-alt"></i>
                         </div>
-                        <span class="h6">+92 300 123 4567</span>
+                        <span class="h6"><%=website_detail&.dig('phone_1')%></span>
                     </a>
                 </div>
                 <div class="col-lg-4">
@@ -96,7 +96,7 @@
                         <div class="icon">
                             <i class="fal fa-envelope"></i>
                         </div>
-                        <span class="h6">aba@kaleidoscopekollege.com</span>
+                        <span class="h6"><%=website_detail&.dig('email')%></span>
                     </a>
                 </div>
             </div>
