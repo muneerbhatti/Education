@@ -2929,7 +2929,7 @@ footer .copyright_row P {
 .hero-banner-1 {
   position: relative;
   height: 855px;
-  background-image: url("/hero-bg.png");
+  background-image: url("/images/hero-bg.png");
   background-size: cover;
   background-position: center;
 }
