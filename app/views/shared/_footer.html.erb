@@ -27,8 +27,8 @@
               <div class="footer_widget">
                 <h5 class="medium-black mb-16">Explore</h5>
                 <ul class="unstyled list">
-                  <li><a href="about.html"><i class="fad fa-chevron-right"></i>About Us</a></li>
-                  <li><a href="gallery.html"><i class="fad fa-chevron-right"></i>Gallery</a></li>
+                  <li><a href="<%=about_us_path%>"><i class="fad fa-chevron-right"></i>About Us</a></li>
+                  <li><a href="<%gallery_path%>"><i class="fad fa-chevron-right"></i>Gallery</a></li>
                   <li><a href="team-detail.html"><i class="fad fa-chevron-right"></i>Teacher’s Detail</a></li>
                 </ul>
               </div>
@@ -37,9 +37,9 @@
               <div class="footer_widget">
                 <h5 class="medium-black mb-16">Information</h5>
                 <ul class="unstyled list">
-                  <li><a href="login.html"><i class="fad fa-chevron-right"></i>Login</a></li>
+                  <li><a href="<%=new_user_session_path%>"><i class="fad fa-chevron-right"></i>Login</a></li>
                   <li><a href="register.html"><i class="fad fa-chevron-right"></i>Register</a></li>
-                  <li><a href="contact.html"><i class="fad fa-chevron-right"></i>Contact Us</a></li>
+                  <li><a href="<%=contact_us_path%>"><i class="fad fa-chevron-right"></i>Contact Us</a></li>
                 </ul>
               </div>
             </div>
@@ -48,9 +48,9 @@
                 <h5 class="medium-black mb-16">Contact Us</h5>
                 <ul class="unstyled list">
                   <li class="mb-16"><i class="fal fa-map-marker-alt"></i><%=website_detail&.dig('address_1')%></li>
-                  <li class="mb-16"><a href="mailto:info@example.com"><i
+                  <li class="mb-16"><a href="mailto:<%=website_detail&.dig('email')%>"><i
                         class="fal fa-envelope"></i><%=website_detail&.dig('email')%></a></li>
-                  <li><a href="tel:123456789"><i class="fal fa-phone-alt"></i><%=website_detail&.dig('phone_1')%></a></li>
+                  <li><a href="tel:<%=website_detail&.dig('phone_1')%>"><i class="fal fa-phone-alt"></i><%=website_detail&.dig('phone_1')%></a></li>
                 </ul>
               </div>
             </div>
@@ -63,17 +63,17 @@
                 </a>
               </li>
               <li>
-                <a href="<%=website_detail&.dig(:facebook)%>">
+                <a href="<%=website_detail&.dig('facebook')%>">
                   <img src="<%=asset_path 'Facebook.png'%>" alt="">
                 </a>
               </li>
               <li>
-                <a href="">
+                <a href="<%=website_detail&.dig('twitter')%>">
                   <img src="<%=asset_path 'Twitter.png'%>" alt="">
                 </a>
               </li>
               <li>
-                <a href="">
+                <a href="<%=website_detail&.dig('linkedin')%>">
                   <img src="<%=asset_path 'Linkedin.png'%>" alt="">
                 </a>
               </li>
@@ -89,7 +89,7 @@
         </div>
       </div>
       <div class="copyright_row">
-        <p>©2025 Educate All Rights Reserved.</p>
+        <p>©2026 kaleidoscopekollege All Rights Reserved.</p>
       </div>
     </footer>
     <!-- Footer Area End -->

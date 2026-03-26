@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     resources :services
     resources :courses
     resources :instructors
-      # root to: "services#index"
+    root to: "services#index"
   end
   root "home#index"
   get "about-us", to: "home#about_us", as: :about_us
