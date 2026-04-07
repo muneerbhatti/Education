@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2026_02_27_153241) do
+ActiveRecord::Schema[8.0].define(version: 2026_03_27_122818) do
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
     t.text "body"
@@ -92,6 +92,14 @@ ActiveRecord::Schema[8.0].define(version: 2026_02_27_153241) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["course_id"], name: "index_instructors_on_course_id"
+  end
+
+  create_table "newsletters", force: :cascade do |t|
+    t.string "email", null: false
+    t.integer "status", default: 0, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_newsletters_on_email", unique: true
   end
 
   create_table "services", force: :cascade do |t|

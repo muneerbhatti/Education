@@ -80,10 +80,10 @@
             </ul>
             <div class="newsletter_block">
               <h5>Newsletter</h5>
-              <form class="newsletter">
-                <input type="email" class="form-control" required placeholder="Your email">
-                <button type="submit" class="educate-btn sm"><span class="educate-btn__curve"></span>Subscribe</button>
-              </form>
+              <%= form_with model: Newsletter.new, url: newsletter_subscribe_path, method: :post, local: true, class: "newsletter" do |f| %>
+                <%= f.email_field :email, class: "form-control", required: true, placeholder: "Your email" %>
+                <%= f.submit "Subscribe", class: "educate-btn sm educate-btn__curve", style: 'background-color: #0aa6d7 !important;' %>
+              <% end %>
             </div>
           </div>
         </div>
