@@ -23,7 +23,7 @@ WebsiteDetail.find_or_create_by!(email: 'aba@kaleidoscopekollege.com') do |compa
   company.address_1 = 'your address'
   company.instagram = 'https://www.instagram.com/kaleidoscopekollege'
   company.facebook = 'https://www.facebook.com/Kaleidoscopekollege'
-  company.about = 'Providing comprehensive ABA therapy and specialized support services to help individuals reach their full potential in life, learning, and community through evidence-based behavioral strategies combined with compassionate care.'
+  company.about = 'Providing comprehensive therapy and specialized support services to help individuals reach their full potential in life, learning, and community through evidence-based behavioral strategies combined with compassionate care.'
 end
 
 
@@ -190,20 +190,20 @@ services_data = [
   },
 
   {
-    title: "ABA Therapy Services",
+    title: "Behavior Therapy Services",
     description: "Applied Behavior Analysis therapy programs for skill development and behavior support.",
     image: 'c-5.png',
     courses: [
       {
-        title: "Introduction to ABA Therapy",
-        category: "ABA Therapy",
+        title: "Introduction to Behavior Therapy",
+        category: "Behavior Therapy",
         difficulty: "Beginner",
         videos_count: 30,
         duration_weeks: 6,
         total_hours: 5,
         assignments: "Behavior Tracking Sheets",
         price: 45,
-        description: "Foundational principles and ethical practices of ABA therapy.",
+        description: "Foundational principles and ethical practices of Behavior therapy.",
         image: 'ai2.png',
         instructor: {
           name: "Dr. Sarah Johnson",
