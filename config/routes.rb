@@ -24,5 +24,7 @@ Rails.application.routes.draw do
   get "gallery", to: "home#gallery", as: :gallery
   get "faq", to: "home#faq", as: :faq
   get "courses", to: "home#courses", as: :courses
+  get "course_details", to: "home#course_details", as: :course_details
+  get "teacher_details", to: "home#teacher_details", as: :teacher_details
   get "up" => "rails/health#show", as: :rails_health_check
 end

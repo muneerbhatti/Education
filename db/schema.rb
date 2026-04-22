@@ -11,20 +11,6 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[8.0].define(version: 2026_03_27_122818) do
-  create_table "active_admin_comments", force: :cascade do |t|
-    t.string "namespace"
-    t.text "body"
-    t.string "resource_type"
-    t.integer "resource_id"
-    t.string "author_type"
-    t.integer "author_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["author_type", "author_id"], name: "index_active_admin_comments_on_author"
-    t.index ["namespace"], name: "index_active_admin_comments_on_namespace"
-    t.index ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource"
-  end
-
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -53,18 +39,6 @@ ActiveRecord::Schema[8.0].define(version: 2026_03_27_122818) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "admin_users", force: :cascade do |t|
-    t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["email"], name: "index_admin_users_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
-  end
-
   create_table "courses", force: :cascade do |t|
     t.integer "service_id", null: false
     t.string "title"
@@ -76,13 +50,14 @@ ActiveRecord::Schema[8.0].define(version: 2026_03_27_122818) do
     t.string "assignments"
     t.decimal "price"
     t.text "description"
+    t.integer "instructor_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["instructor_id"], name: "index_courses_on_instructor_id"
     t.index ["service_id"], name: "index_courses_on_service_id"
   end
 
   create_table "instructors", force: :cascade do |t|
-    t.integer "course_id", null: false
     t.string "name"
     t.string "email"
     t.string "designation"
@@ -91,7 +66,6 @@ ActiveRecord::Schema[8.0].define(version: 2026_03_27_122818) do
     t.string "specialist"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["course_id"], name: "index_instructors_on_course_id"
   end
 
   create_table "newsletters", force: :cascade do |t|
@@ -145,6 +119,6 @@ ActiveRecord::Schema[8.0].define(version: 2026_03_27_122818) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "courses", "instructors"
   add_foreign_key "courses", "services"
-  add_foreign_key "instructors", "courses"
 end

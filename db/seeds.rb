@@ -1,14 +1,3 @@
-# This file should ensure the existence of records required to run the application in every environment (production,
-# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Example:
-#
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
-
-
 User.find_or_create_by!(email: 'aba@kaleidoscopekollege.com') do |user|
   user.first_name = 'Corie'
   user.last_name = ' '
@@ -16,253 +5,49 @@ User.find_or_create_by!(email: 'aba@kaleidoscopekollege.com') do |user|
   user.role = 'admin'
 end
 
-WebsiteDetail.find_or_create_by!(email: 'aba@kaleidoscopekollege.com') do |company|
-  company.name = 'Kaleidoscope Kollege'
-  company.phone_1 = '(443) 822-4357'
-  company.phone_2 = '(703) 718-6085'
-  company.address_1 = 'your address'
-  company.instagram = 'https://www.instagram.com/kaleidoscopekollege'
-  company.facebook = 'https://www.facebook.com/Kaleidoscopekollege'
-  company.about = 'Providing comprehensive therapy and specialized support services to help individuals reach their full potential in life, learning, and community through evidence-based behavioral strategies combined with compassionate care.'
-end
+company = WebsiteDetail.find_or_initialize_by(email: 'aba@kaleidoscopekollege.com')
+
+company.update!(
+  name: 'Kaleidoscope Kollege',
+  email: 'ABA@KALEIDOSCOPEKOLLEGE.COM',
+  phone_1: '(443) 822-4357',
+  phone_2: '(703) 718-6085',
+  address_1: 'Online Learning | Maryland | Washington, DC | Northern, VA ',
+  address_2: '5900 Balcones Drive, STE 100 Austin TX 78731',
+  instagram: 'https://www.instagram.com/kaleidoscopekollege',
+  facebook: 'https://www.facebook.com/Kaleidoscopekollege',
+  linkedin: 'https://www.linkedin.com/in/kaleidoscope-kollege-ba1b633b2/?skipRedirect=true',
+  about: 'Providing comprehensive therapy and specialized support services to help individuals reach their full potential in life, learning, and community through evidence-based behavioral strategies combined with compassionate care.'
+)
 
 
 puts "Seeding Services & Courses..."
 
 services_data = [
   {
-    title: "Speech & Language Therapy Services",
-    description: "Professional speech and language therapy services to support communication development.",
-    image: 'c-1.png',
+    title: "Behavior Technician",
+    description: "Trained professionals who implement behavior intervention plans, collect data, and support individuals in developing essential life, communication, and social skills through evidence-based techniques.",
+    image: 'service_1.png',
     courses: [
       {
-        title: "Speech Sound Disorders",
-        category: "Speech & Language Therapy",
+        title: "Understanding Behavior Data Collection",
+        category: "ABA",
         difficulty: "Beginner – Intermediate",
         videos_count: 28,
         duration_weeks: 6,
         total_hours: 5,
         assignments: "Weekly Practice Activities",
-        price: 40,
-        description: "Learn assessment and therapy techniques for articulation and phonological disorders.",
-        image: 'ai2.png',
+        price: 5.99,
+        description: "In Applied Behavior Analysis (ABA), data collection is critical for understanding behavior patterns and making informed decisions. In this course, you’ll learn how to collect, analyze, and interpret behavior data to track children’s progress, identify trends, and guide behavior management strategies. This course will help you develop the skills to use data as a tool for improving behavior, academic engagement, and emotional regulation. With real-life examples, interactive quizzes, and visual aids, you’ll gain a deeper understanding of how data informs decisions and supports children’s development.",
+        image: 'course_1.png',
         instructor: {
           name: "Dr. Sarah Johnson",
           email: "sarah.johnson@example.com",
-          designation: "Senior Speech Therapist",
-          profile_description: "10+ years of experience in pediatric speech and language therapy.",
+          designation: "Clinical Psychologist",
+          profile_description: "10+ years of experience in Clinical Psychologist.",
           rating: 4.8,
-          specialist: "Speech Sound Disorders",
+          specialist: "Clinical Psychologist",
           image: 'Card.png'
-        }
-      },
-      {
-        title: "Language Development & Disorders",
-        category: "Speech & Language Therapy",
-        difficulty: "Intermediate",
-        videos_count: 35,
-        duration_weeks: 8,
-        total_hours: 6,
-        assignments: "Weekly Assignments",
-        price: 55,
-        description: "Understand receptive and expressive language disorders with practical intervention strategies.",
-        image: 'ps.png',
-        instructor: {
-          name: "Dr. Sarah Johnson",
-          email: "sarah.johnson@example.com",
-          designation: "Senior Speech Therapist",
-          profile_description: "10+ years of experience in pediatric speech and language therapy.",
-          rating: 4.8,
-          specialist: "Speech Sound Disorders",
-          image: 'Card.png'
-        }
-
-      }
-    ]
-  },
-
-  {
-    title: "Occupational Therapy Services",
-    description: "Occupational therapy programs focused on functional independence and daily living skills.",
-    image: 'c-1.png',
-    courses: [
-      {
-        title: "Fine Motor Skills Development",
-        category: "Occupational Therapy",
-        difficulty: "Beginner",
-        videos_count: 30,
-        duration_weeks: 6,
-        total_hours: 5,
-        assignments: "Weekly Skill Activities",
-        price: 45,
-        description: "Improve hand coordination, grip strength, and fine motor control.",
-        image: 'ai.png',
-        instructor: {
-          name: "Dr. Sarah Johnson",
-          email: "sarah.johnson@example.com",
-          designation: "Senior Speech Therapist",
-          profile_description: "10+ years of experience in pediatric speech and language therapy.",
-          rating: 4.8,
-          specialist: "Speech Sound Disorders",
-          image: 'Card-2.png'
-        }
-      },
-      {
-        title: "Sensory Processing & Integration",
-        category: "Occupational Therapy",
-        difficulty: "Intermediate",
-        videos_count: 40,
-        duration_weeks: 8,
-        total_hours: 7,
-        assignments: "Sensory Plans & Reports",
-        price: 60,
-        description: "Understand sensory systems and apply integration strategies at home and school.",
-        image: 'ai3.png',
-        instructor: {
-          name: "Dr. Sarah Johnson",
-          email: "sarah.johnson@example.com",
-          designation: "Senior Speech Therapist",
-          profile_description: "10+ years of experience in pediatric speech and language therapy.",
-          rating: 4.8,
-          specialist: "Speech Sound Disorders",
-          image: 'Card-3.png'
-        }
-      }
-    ]
-  },
-
-  {
-    title: "Physical Therapy Services",
-    description: "Physical therapy programs to enhance strength, posture, and functional movement.",
-    image: 'c-4.png',
-    courses: [
-      {
-        title: "Gross Motor Skills Development",
-        category: "Physical Therapy",
-        difficulty: "Beginner – Intermediate",
-        videos_count: 32,
-        duration_weeks: 6,
-        total_hours: 6,
-        assignments: "Weekly Exercise Plans",
-        price: 45,
-        description: "Develop balance, coordination, and movement through guided exercises.",
-        image: 'ai2.png',
-        instructor: {
-          name: "Dr. Sarah Johnson",
-          email: "sarah.johnson@example.com",
-          designation: "Senior Speech Therapist",
-          profile_description: "10+ years of experience in pediatric speech and language therapy.",
-          rating: 4.8,
-          specialist: "Speech Sound Disorders",
-          image: 'Card-3.png'
-        }
-      }
-    ]
-  },
-
-  {
-    title: "Psychological Services",
-    description: "Psychological and behavioral support services for emotional well-being.",
-    image: 'c-3.png',
-    courses: [
-      {
-        title: "Emotional & Behavioral Regulation",
-        category: "Psychological Services",
-        difficulty: "Beginner – Intermediate",
-        videos_count: 34,
-        duration_weeks: 7,
-        total_hours: 6,
-        assignments: "Weekly Reflection Tasks",
-        price: 50,
-        description: "Learn emotional regulation techniques and behavioral coping strategies.",
-        image: 'ai3.png',
-        instructor: {
-          name: "Dr. Sarah Johnson",
-          email: "sarah.johnson@example.com",
-          designation: "Senior Speech Therapist",
-          profile_description: "10+ years of experience in pediatric speech and language therapy.",
-          rating: 4.8,
-          specialist: "Speech Sound Disorders",
-          image: 'Card-3.png'
-        }
-      }
-    ]
-  },
-
-  {
-    title: "Behavior Therapy Services",
-    description: "Applied Behavior Analysis therapy programs for skill development and behavior support.",
-    image: 'c-5.png',
-    courses: [
-      {
-        title: "Introduction to Behavior Therapy",
-        category: "Behavior Therapy",
-        difficulty: "Beginner",
-        videos_count: 30,
-        duration_weeks: 6,
-        total_hours: 5,
-        assignments: "Behavior Tracking Sheets",
-        price: 45,
-        description: "Foundational principles and ethical practices of Behavior therapy.",
-        image: 'ai2.png',
-        instructor: {
-          name: "Dr. Sarah Johnson",
-          email: "sarah.johnson@example.com",
-          designation: "Senior Speech Therapist",
-          profile_description: "10+ years of experience in pediatric speech and language therapy.",
-          rating: 4.8,
-          specialist: "Speech Sound Disorders",
-          image: 'Card-3.png'
-        }
-      }
-    ]
-  },
-
-  {
-    title: "Bilingual & Virtual Therapy Services",
-    description: "Language and therapy services delivered bilingually and through virtual platforms.",
-    image: 'c-6.png',
-    courses: [
-      {
-        title: "Bilingual Speech & Language Development",
-        category: "Bilingual Therapy",
-        difficulty: "Intermediate",
-        videos_count: 33,
-        duration_weeks: 7,
-        total_hours: 6,
-        assignments: "Language Practice Activities",
-        price: 50,
-        description: "Support multilingual language development using evidence-based strategies.",
-        image: 'ai2.png',
-        instructor: {
-          name: "Dr. Sarah Johnson",
-          email: "sarah.johnson@example.com",
-          designation: "Senior Speech Therapist",
-          profile_description: "10+ years of experience in pediatric speech and language therapy.",
-          rating: 4.8,
-          specialist: "Speech Sound Disorders",
-          image: 'Card-3.png'
-        }
-      },
-      {
-        title: "Virtual Therapy Essentials",
-        category: "Virtual Therapy",
-        difficulty: "Beginner",
-        videos_count: 26,
-        duration_weeks: 5,
-        total_hours: 4,
-        assignments: "Online Session Practice",
-        price: 35,
-        description: "Learn best practices for delivering effective teletherapy sessions.",
-        image: 'ai3.png',
-        instructor: {
-          name: "Dr. Sarah Johnson",
-          email: "sarah.johnson@example.com",
-          designation: "Senior Speech Therapist",
-          profile_description: "10+ years of experience in pediatric speech and language therapy.",
-          rating: 4.8,
-          specialist: "Speech Sound Disorders",
-          image: 'Card-3.png'
         }
       }
     ]
@@ -272,10 +57,14 @@ services_data = [
 puts "Seeding Services, Courses & Instructors..."
 
 services_data.each do |service_data|
-  service = Service.find_or_create_by!(title: service_data[:title]) do |s|
-    s.description = service_data[:description]
-  end
-  image_path = Rails.root.join("app/assets/images/#{service_data[:image]}")
+  service = Service.find_or_initialize_by(title: service_data[:title])
+
+  service.update!(
+    description: service_data[:description]
+  )
+
+  image_path = Rails.root.join("app/assets/images/services/#{service_data[:image]}")
+
   if File.exist?(image_path)
     service.image.attach(
       io: File.open(image_path),
@@ -284,41 +73,20 @@ services_data.each do |service_data|
     )
   end
 
-  service_data[:courses].each do |course_data|
-    course = Course.find_or_create_by!(
-      title: course_data[:title],
-      service: service
-    ) do |c|
-      c.category = course_data[:category]
-      c.difficulty = course_data[:difficulty]
-      c.videos_count = course_data[:videos_count]
-      c.duration_weeks = course_data[:duration_weeks]
-      c.total_hours = course_data[:total_hours]
-      c.assignments = course_data[:assignments]
-      c.price = course_data[:price]
-      c.description = course_data[:description]
-    end
-    image_path = Rails.root.join("app/assets/images/#{course_data[:image]}")
-    if File.exist?(image_path)
-      course.image.attach(
-        io: File.open(image_path),
-        filename: course_data[:image],
-        content_type: Marcel::MimeType.for(Pathname.new(image_path))
-      )
-    end
 
+  service_data[:courses].each do |course_data|
     # Create Instructor (one per course)
     if course_data[:instructor]
-      instructor = Instructor.find_or_create_by!(
-        email: course_data[:instructor][:email],
-        course: course
-      ) do |i|
-        i.name = course_data[:instructor][:name]
-        i.designation = course_data[:instructor][:designation]
-        i.profile_description = course_data[:instructor][:profile_description]
-        i.rating = course_data[:instructor][:rating]
-        i.specialist = course_data[:instructor][:specialist]
-      end
+      instructor = Instructor.find_or_initialize_by(
+        email: course_data[:instructor][:email]
+      )
+      instructor.update!(
+        name: course_data[:instructor][:name],
+        designation: course_data[:instructor][:designation],
+        profile_description: course_data[:instructor][:profile_description],
+        rating: course_data[:instructor][:rating],
+        specialist: course_data[:instructor][:specialist]
+      )
       image_path = Rails.root.join("app/assets/images/#{course_data[:instructor][:image]}")
       if File.exist?(image_path)
         instructor.image.attach(
@@ -327,6 +95,30 @@ services_data.each do |service_data|
           content_type: Marcel::MimeType.for(Pathname.new(image_path))
         )
       end
+    end
+    course = Course.find_or_initialize_by(
+      title: course_data[:title],
+      service: service,
+      instructor: instructor
+    )
+
+    course.update!(
+      category: course_data[:category],
+      difficulty: course_data[:difficulty],
+      videos_count: course_data[:videos_count],
+      duration_weeks: course_data[:duration_weeks],
+      total_hours: course_data[:total_hours],
+      assignments: course_data[:assignments],
+      price: course_data[:price],
+      description: course_data[:description]
+    )
+    image_path = Rails.root.join("app/assets/images/courses#{course_data[:image]}")
+    if File.exist?(image_path)
+      course.image.attach(
+        io: File.open(image_path),
+        filename: course_data[:image],
+        content_type: Marcel::MimeType.for(Pathname.new(image_path))
+      )
     end
   end
 end

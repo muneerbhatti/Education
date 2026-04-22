@@ -78,7 +78,7 @@ class InstructorDashboard < Administrate::BaseDashboard
   # Overwrite this method to customize how instructors are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(instructor)
-  #   "Instructor ##{instructor.id}"
-  # end
+  def display_resource(instructor)
+    "Instructor ##{instructor.name}"
+  end
 end

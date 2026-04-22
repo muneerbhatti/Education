@@ -46,9 +46,9 @@ class ServiceDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
-    courses
-    description
     title
+    description
+    courses
     image
   ].freeze
 
@@ -67,7 +67,7 @@ class ServiceDashboard < Administrate::BaseDashboard
   # Overwrite this method to customize how services are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(service)
-  #   "Service ##{service.id}"
-  # end
+  def display_resource(service)
+    "Service ##{service.title}"
+  end
 end

@@ -21,7 +21,7 @@
           <div class="course__card__content">
             <div class="left__block">
               <%=image_tag 'tag-1.png', class: 'course_tag'%>
-              <h4 class="mb-4p"><a href="course-detail.html"><%=course.title%></a></h4>
+              <h4 class="mb-4p"><a href="<%=course_details_path(id: course.id)%>"><%=course.title%></a></h4>
               <p class="h6 mb-24"><%=course.category%></p>
               <ul class="course_info p-0 mb-32">
                 <li><i class="fal fa-presentation"></i><%=course.videos_count%> Videos</li>
@@ -42,7 +42,7 @@
                 </div>
                 <span class="h3 color-white">$<%=course.price%></span>
               </div>
-              <a href="course-detail.html" class="educate-btn sm mx-xl-auto me-2"><span
+              <a href="/course_details" class="educate-btn sm mx-xl-auto me-2"><span
                   class="educate-btn__curve"></span>Enroll Now</a>
             </div>
             <%= image_tag "vector-1.png", class:"bottom_vector"%>

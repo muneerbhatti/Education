@@ -14,7 +14,7 @@ class CourseDashboard < Administrate::BaseDashboard
     description: Field::Text,
     difficulty: Field::String,
     duration_weeks: Field::Number,
-    instructor: Field::HasOne,
+    instructor: Field::BelongsTo,
     image: ActiveStorageField,
     price: Field::String.with_options(searchable: false),
     service: Field::BelongsTo,
@@ -88,7 +88,7 @@ class CourseDashboard < Administrate::BaseDashboard
   # Overwrite this method to customize how courses are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(course)
-  #   "Course ##{course.id}"
-  # end
+  def display_resource(course)
+    "#{course.title}"
+  end
 end
