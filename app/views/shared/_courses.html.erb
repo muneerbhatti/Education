@@ -5,7 +5,7 @@
           <h6 class="color-primary mb-8">–––– Popular Courses</h6>
           <h2>Programs Designed <br> By <span class="fm-sec">Experts</span></h2>
         </div>
-        <a href="courses.html" class="educate-btn d-md-block d-none"><span class="educate-btn__curve"></span>View
+        <a href="/courses" class="educate-btn d-md-block d-none"><span class="educate-btn__curve"></span>View
           All</a>
       </div>
     </div>
@@ -14,7 +14,7 @@
         <!-- Slide Item  -->
         <div class="course__card mb-24">
           <div class="course__card__icon">
-            <%if course.image.attached?%>
+            <%if course.image.attached? && false%>
               <img src="<%= url_for(course.image)%>" alt="" class="image">
             <%end%>
           </div>
@@ -28,7 +28,7 @@
                 <li><i class="fal fa-clock"></i><%=course.total_hours%> hours</li>
               </ul>
               <div class="author_card">
-                <%= image_tag "a-1.png",class:"author_img" %>
+                <%= image_tag course.instructor.image, class:"author_img", style: 'width:60px; height:60px;'%>
                 <div class="author_text_block">
                   <a href="team-detail.html" class="h6 mb-4p"><%=course.instructor&.name%></a>
                   <p><%=course.instructor&.designation%></p>

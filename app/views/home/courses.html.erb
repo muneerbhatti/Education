@@ -22,250 +22,67 @@
     <div class="filter_row">
       <div class="left_block">
         <div class="select_filter">
-          <span class="dark-gray">Short by:</span>
-          <select name="select" class="has-nice-select">
-            <option value="1">Newest</option>
-            <option value="2">Oldest</option>
-            <option value="3">Popular</option>
-            <option value="4">A-Z</option>
-          </select>
-        </div>
-        <div class="select_filter">
           <span class="dark-gray">Category:</span>
-          <select name="select" class="has-nice-select">
-            <option value="1">Student Life</option>
-            <option value="2">Creative Arts</option>
-            <option value="3">Graphic Design</option>
-            <option value="4">Economic</option>
+          <select id="category-filter" class="form-control">
+            <option value="all">All Categories</option>
+
+            <% @courses.pluck(:category).uniq.each do |cat| %>
+              <option value="<%= cat %>"><%= cat %></option>
+            <% end %>
           </select>
         </div>
       </div>
       <div class="right_block">
-        <h6 class="dark-gray">Showing 1-9 of 50 results</h6>
+        <h6 class="dark-gray"></h6>
         <form action="blog-grid-left.html" class="search_bar">
-          <button type="submit"><i class="fal fa-search"></i></button>
-          <input type="search" class="form-control" placeholder="Search here">
+          <button type=""><i class="fal fa-search"></i></button>
+          <input type="search" class="form-control" placeholder="Search here" id="course-search">
         </form>
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-6">
-        <div class="course__card mb-24">
-          <div class="course__card__icon">
-            <%= image_tag "ps.png"%>
-          </div>
-          <div class="course__card__content">
-            <div class="left__block">
-              <%= image_tag "tag-1.png",class:"course_tag"%>
-              <h4 class="mb-4p"><a href="course-detail.html">Photoshop Course</a></h4>
-              <p class="h6 mb-24">Graphics Design</p>
-              <ul class="course_info p-0 mb-32">
-                <li><i class="fal fa-presentation"></i>45 Videos</li>
-                <li><i class="fal fa-clock"></i>05+ Hours</li>
-              </ul>
-              <div class="author_card">
-                <%= image_tag "a-1.png", class:"author_img"%>
-                <div class="author_text_block">
-                  <a href="team-detail.html" class="h6 mb-4p">Benny Martin</a>
-                  <p>Adobe Embassador</p>
+      <%@courses.each do |course|%>
+        <div class="col-lg-6 course-item"
+             data-category="<%= course.category %>"
+             data-title="<%= course.title.downcase %>"
+             data-instructor="<%= course.instructor.name.downcase %>">
+          <div class="course__card mb-24">
+            <!--<div class="course__card__icon">
+              <%#= image_tag "ps.png"%>
+            </div>-->
+            <div class="course__card__content">
+              <div class="left__block">
+                <%#= image_tag "tag-1.png",class:"course_tag"%>
+                <h4 class="mb-4p"><a href="<%=course_details_path(id: course.id)%>"><%=course.title%></a></h4>
+                <p class="h6 mb-24"><%=course.category%></p>
+                <ul class="course_info p-0 mb-32">
+                  <li><i class="fal fa-presentation"></i><%=course.videos_count%> Videos</li>
+                  <li><i class="fal fa-clock"></i><%=course.total_hours%> Hours</li>
+                </ul>
+                <div class="author_card">
+                  <%= image_tag course.instructor.image, class:"author_img", style: 'width:80px; height:80px;'%>
+                  <div class="author_text_block">
+                    <a href="team-detail.html" class="h6 mb-4p"><%=course.instructor.name%></a>
+                    <p><%=course.instructor.specialist%></p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="right__block">
-              <div class="price_block mb-16">
-                <div class="price_vector">
-                 <%= image_tag "vector-group.png", alt: "" %>
+              <div class="right__block">
+                <div class="price_block mb-16">
+                  <div class="price_vector">
+                   <%= image_tag "vector-group.png", alt: "" %>
+                  </div>
+                  <span class="h3 color-white">$<%=course.price%></span>
                 </div>
-                <span class="h3 color-white">$45</span>
+                <a href="course-detail.html" class="educate-btn sm mx-xl-auto me-2"><span
+                    class="educate-btn__curve"></span>Buy Now</a>
               </div>
-              <a href="course-detail.html" class="educate-btn sm mx-xl-auto me-2"><span
-                  class="educate-btn__curve"></span>Buy Now</a>
+              <%= image_tag "vector-1.png" ,class:"bottom_vector"%>
             </div>
-            <%= image_tag "vector-1.png" ,class:"bottom_vector"%>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="course__card mb-24">
-          <div class="course__card__icon">
-            <%= image_tag "ai.png"%>
-          </div>
-          <div class="course__card__content">
-            <div class="left__block">
-              <%= image_tag "tag-2.png", class: "course_tag" %>
-              <h4 class="mb-4p"><a href="course-detail.html">Artificial Intelligence</a></h4>
-              <p class="h6 mb-24">Graphics Design</p>
-              <ul class="course_info p-0 mb-32">
-                <li><i class="fal fa-presentation"></i>45 Videos</li>
-                <li><i class="fal fa-clock"></i>05+ Hours</li>
-              </ul>
-              <div class="author_card">
-                <%= image_tag "a-2.png", class: "author_img" %>
-                <div class="author_text_block">
-                  <a href="team-detail.html" class="h6 mb-4p">Ethan Wilson</a>
-                  <p>AI Expert</p>
-                </div>
-              </div>
-            </div>
-            <div class="right__block">
-              <div class="price_block mb-16">
-                <div class="price_vector">
-                  <%= image_tag "vector-group.png", alt: "" %>
-                </div>
-                <span class="h3 color-white">$40</span>
-              </div>
-              <a href="course-detail.html" class="educate-btn sm mx-xl-auto me-2"><span
-                  class="educate-btn__curve"></span>Buy Now</a>
-            </div>
-            <%= image_tag "vector-1.png", class: "bottom_vector" %>
           </div>
         </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="course__card mb-24">
-          <div class="course__card__icon">
-           <%= image_tag "desktop.png", alt: "" %>
-          </div>
-          <div class="course__card__content">
-            <div class="left__block">
-              <%= image_tag "tag-1.png",class:"course_tag"%>
-              <h4 class="mb-4p"><a href="course-detail.html">Web Design Course</a></h4>
-              <p class="h6 mb-24">Graphics Design</p>
-              <ul class="course_info p-0 mb-32">
-                <li><i class="fal fa-presentation"></i>45 Videos</li>
-                <li><i class="fal fa-clock"></i>05+ Hours</li>
-              </ul>
-              <div class="author_card">
-                <%= image_tag "a-3.png", class: "author_img" %>
-                <div class="author_text_block">
-                  <a href="team-detail.html" class="h6 mb-4p">Ava Johnson</a>
-                  <p>Web Designer</p>
-                </div>
-              </div>
-            </div>
-            <div class="right__block">
-              <div class="price_block mb-16">
-                <div class="price_vector">
-                  <%= image_tag "vector-group.png", alt: "" %>
-                </div>
-                <span class="h3 color-white">$45</span>
-              </div>
-              <a href="course-detail.html" class="educate-btn sm mx-xl-auto me-2"><span
-                  class="educate-btn__curve"></span>Buy Now</a>
-            </div>
-            <%= image_tag "vector-1.png", class: "bottom_vector" %>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="course__card mb-24">
-          <div class="course__card__icon">
-           <%= image_tag "figma.png", alt: "" %>
-          </div>
-          <div class="course__card__content">
-            <div class="left__block">
-              <%= image_tag "tag-2.png",class:"course_tag"%>
-              <h4 class="mb-4p"><a href="course-detail.html">Figma Course</a></h4>
-              <p class="h6 mb-24">Graphics Design</p>
-              <ul class="course_info p-0 mb-32">
-                <li><i class="fal fa-presentation"></i>45 Videos</li>
-                <li><i class="fal fa-clock"></i>05+ Hours</li>
-              </ul>
-              <div class="author_card">
-                <%= image_tag "a-4.png", class: "author_img" %>
-                <div class="author_text_block">
-                  <a href="team-detail.html" class="h6 mb-4p">Emma Mitchell</a>
-                  <p>Ui Engineer</p>
-                </div>
-              </div>
-            </div>
-            <div class="right__block">
-              <div class="price_block mb-16">
-                <div class="price_vector">
-                 <%= image_tag "vector-group.png", alt: "" %>
-                </div>
-                <span class="h3 color-white">$45</span>
-              </div>
-              <a href="course-detail.html" class="educate-btn sm mx-xl-auto me-2"><span
-                  class="educate-btn__curve"></span>Buy Now</a>
-            </div>
-            <%= image_tag "vector-1.png", class: "bottom_vector" %>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="course__card mb-24">
-          <div class="course__card__icon">
-            <%= image_tag "ai2.png", alt: "" %>
-          </div>
-          <div class="course__card__content">
-            <div class="left__block">
-              <%= image_tag "tag-1.png",class:"course_tag"%>
-              <h4 class="mb-4p"><a href="course-detail.html">Illustrator Course</a></h4>
-              <p class="h6 mb-24">Graphics Design</p>
-              <ul class="course_info p-0 mb-32">
-                <li><i class="fal fa-presentation"></i>45 Videos</li>
-                <li><i class="fal fa-clock"></i>05+ Hours</li>
-              </ul>
-              <div class="author_card">
-                <%= image_tag "a-5.png", class: "author_img" %>
-                <div class="author_text_block">
-                  <a href="team-detail.html" class="h6 mb-4p">Benny Martin</a>
-                  <p>Adobe Embassador</p>
-                </div>
-              </div>
-            </div>
-            <div class="right__block">
-              <div class="price_block mb-16">
-                <div class="price_vector">
-                  <%= image_tag "vector-group.png", alt: "" %>>
-                </div>
-                <span class="h3 color-white">$45</span>
-              </div>
-              <a href="course-detail.html" class="educate-btn sm mx-xl-auto me-2"><span
-                  class="educate-btn__curve"></span>Buy Now</a>
-            </div>
-            <%= image_tag "vector-1.png", class: "bottom_vector" %>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="course__card mb-24">
-          <div class="course__card__icon">
-            <%= image_tag "ai3.png", alt: "" %>
-          </div>
-          <div class="course__card__content">
-            <div class="left__block">
-              <%= image_tag "tag-2.png", class: "course_tag" %>
-              <h4 class="mb-4p"><a href="course-detail.html">After Effects Course</a></h4>
-              <p class="h6 mb-24">Graphics Design</p>
-              <ul class="course_info p-0 mb-32">
-                <li><i class="fal fa-presentation"></i>45 Videos</li>
-                <li><i class="fal fa-clock"></i>05+ Hours</li>
-              </ul>
-              <div class="author_card">
-                 <%= image_tag "a-6.png", class: "author_img" %>
-                <div class="author_text_block">
-                  <a href="team-detail.html" class="h6 mb-4p">Miller Noah</a>
-                  <p>Senior Designer</p>
-                </div>
-              </div>
-            </div>
-            <div class="right__block">
-              <div class="price_block mb-16">
-                <div class="price_vector">
-                 <%= image_tag "vector-group.png", alt: "" %>
-                </div>
-                <span class="h3 color-white">$45</span>
-              </div>
-              <a href="course-detail.html" class="educate-btn sm mx-xl-auto me-2"><span
-                  class="educate-btn__curve"></span>Buy Now</a>
-            </div>
-            <%= image_tag "vector-1.png", class: "bottom_vector" %>
-          </div>
-        </div>
-      </div>
-      <ul class="pagination">
+      <%end%>
+      <!--<ul class="pagination">
         <li class="page-item"><a href="" class="page-link arrow" aria-label="next"><i
               class="far fa-chevron-left"></i></a></li>
         <li class="page-item"><a class="page-link current" href="">1</a></li>
@@ -273,8 +90,39 @@
         <li class="page-item"><a class="page-link" href="">3</a></li>
         <li class="page-item"><a href="" class="page-link arrow" aria-label="next"><i
               class="far fa-chevron-right"></i></a></li>
-      </ul>
+      </ul> -->
     </div>
   </div>
 </section>
 <!-- Courses Area End -->
+<script>
+ document.addEventListener("turbo:load", function () {
+
+  function filterCourses() {
+    let selectedCategory = $(".filter-btn.active").data("filter") || "all";
+    let searchText = $("#course-search").val().toLowerCase();
+
+    $(".course-item").each(function () {
+      let category = $(this).data("category");
+      let title = $(this).data("title");
+
+      let matchCategory = (selectedCategory === "all" || category === selectedCategory);
+      let matchSearch = title.includes(searchText);
+      if (matchCategory && matchSearch) {
+        $(this).fadeIn();
+      } else {
+        $(this).hide();
+      }
+    });
+  }
+
+  $("#category-filter").on("change", function () {
+    filterCourses();
+  });
+
+  $("#course-search").on("keyup", function () {
+    filterCourses();
+  });
+
+});
+</script>

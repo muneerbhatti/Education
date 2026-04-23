@@ -1,6 +1,6 @@
 require "administrate/base_dashboard"
 
-class CourseDashboard < Administrate::BaseDashboard
+class PostDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
   #
@@ -9,21 +9,14 @@ class CourseDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     id: Field::Number,
-    assignments: Field::String,
-    category: Field::String,
-    description: TinymceField,
-    difficulty: Field::String,
-    duration_weeks: Field::Number,
-    instructor: Field::BelongsTo,
-    image: ActiveStorageField,
-    price: Field::String.with_options(searchable: false),
-    service: Field::BelongsTo,
+    body: TinymceField,
+    published_at: Field::DateTime,
+    slug: Field::String,
+    status: Field::Select.with_options(searchable: false, collection: ->(field) { field.resource.class.send(field.attribute.to_s.pluralize).keys }),
     title: Field::String,
-    total_hours: Field::Number,
-    videos_count: Field::Number,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
-    summary: Field::Text
+    featured_image: ActiveStorageField,
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -34,8 +27,10 @@ class CourseDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = %i[
     id
     title
-    category
-    price
+    slug
+    status
+    published_at
+    featured_image
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -43,17 +38,11 @@ class CourseDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = %i[
     id
     title
-    category
-    assignments
-    difficulty
-    duration_weeks
-    instructor
-    price
-    service
-    total_hours
-    videos_count
-    description
-    image
+    body
+    slug
+    status
+    published_at
+    featured_image
     created_at
     updated_at
   ].freeze
@@ -63,18 +52,11 @@ class CourseDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
     title
-    price
-    category
-    assignments
-    difficulty
-    duration_weeks
-    instructor
-    service
-    total_hours
-    videos_count
-    image
-    summary
-    description
+    body
+    slug
+    published_at
+    status
+    featured_image
   ].freeze
 
   # COLLECTION_FILTERS
@@ -89,10 +71,10 @@ class CourseDashboard < Administrate::BaseDashboard
   #   }.freeze
   COLLECTION_FILTERS = {}.freeze
 
-  # Overwrite this method to customize how courses are displayed
+  # Overwrite this method to customize how posts are displayed
   # across all pages of the admin dashboard.
   #
-  def display_resource(course)
-    "#{course.title}"
-  end
+  # def display_resource(post)
+  #   "Post ##{post.id}"
+  # end
 end

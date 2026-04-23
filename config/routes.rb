@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
+  resources :posts, only: %i[index show], param: :slug
+  post "/tinymce_upload", to: "tinymce#upload"
   post "newsletter/subscribe", to: "newsletters#subscribe"
   post "newsletter/unsubscribe", to: "newsletters#unsubscribe"
   get "newsletter/subscribed", to: "newsletters#subscribed", as: :newsletter_subscribed
@@ -12,6 +14,11 @@ Rails.application.routes.draw do
       collection do
         get :subscribed
         get :unsubscribed
+      end
+    end
+    resources :posts do
+      member do
+        post :publish
       end
     end
     root to: "services#index"

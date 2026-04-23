@@ -25,7 +25,7 @@
                             <div class="col-xl-6 col-lg-12 col-sm-6">
                                 <div class="author_block_card mb-16">
                                     <div class="author_img">
-                                        <img src="<%=asset_path 'u-1.png'%>" alt="">
+                                       <%= image_tag @course.instructor.image, class:"author_img", style: 'width:50px; height:50px;'%>
                                     </div>
                                     <div class="author_detail">
                                         <h5 class="mb-4p"><a href="team-detail.html"><%=@instructor.name%></a></h5>
@@ -39,7 +39,7 @@
                             </div>
                         </div>
                         <h2 class="mb-12"><%=@course.title%></h2>
-                        <p class="mb-24"><%=@course.description%>
+                        <p class="mb-24"><%=@course.summary%>
                         </p>
                     </div>
                     <div class="col-lg-6">
@@ -77,7 +77,8 @@
                         <a href="" class="educate-btn"><span class="educate-btn__curve"></span>Buy Course</a>
                     </div>
                 </div>
-                <div class="row">
+                <%=@course.description&.html_safe%>
+               <!-- <div class="row">
                     <div class="col-lg-3">
                         <ul class="nav nav-tabs" id="myTab" role="tablist">
                             <li class="nav-item" role="presentation">
@@ -295,7 +296,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </section>
         <!-- Course Detail Area End -->

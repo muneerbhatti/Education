@@ -11,6 +11,7 @@ class CreateCourses < ActiveRecord::Migration[8.0]
       t.string :assignments
       t.decimal :price
       t.text :description
+      t.text :summary
       t.references :instructor, null: false, foreign_key: true
 
       t.timestamps

@@ -38,7 +38,8 @@ services_data = [
         total_hours: 5,
         assignments: "Weekly Practice Activities",
         price: 5.99,
-        description: "In Applied Behavior Analysis (ABA), data collection is critical for understanding behavior patterns and making informed decisions. In this course, you’ll learn how to collect, analyze, and interpret behavior data to track children’s progress, identify trends, and guide behavior management strategies. This course will help you develop the skills to use data as a tool for improving behavior, academic engagement, and emotional regulation. With real-life examples, interactive quizzes, and visual aids, you’ll gain a deeper understanding of how data informs decisions and supports children’s development.",
+        description: '',
+        summary: "In Applied Behavior Analysis (ABA), data collection is critical for understanding behavior patterns and making informed decisions. In this course, you’ll learn how to collect, analyze, and interpret behavior data to track children’s progress, identify trends, and guide behavior management strategies. This course will help you develop the skills to use data as a tool for improving behavior, academic engagement, and emotional regulation. With real-life examples, interactive quizzes, and visual aids, you’ll gain a deeper understanding of how data informs decisions and supports children’s development.",
         image: 'course_1.png',
         instructor: {
           name: "Dr. Sarah Johnson",
@@ -110,7 +111,7 @@ services_data.each do |service_data|
       total_hours: course_data[:total_hours],
       assignments: course_data[:assignments],
       price: course_data[:price],
-      description: course_data[:description]
+      summary: course_data[:summary]
     )
     image_path = Rails.root.join("app/assets/images/courses#{course_data[:image]}")
     if File.exist?(image_path)
