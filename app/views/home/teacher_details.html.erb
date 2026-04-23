@@ -20,18 +20,15 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-5">
-                        <img src="assets/media/team/team_detail.png" alt="" class="br-15 shadow mb-32 mb-lg-0">
+                        <%=image_tag @teacher.image, class: 'br-15 shadow mb-32 mb-lg-0'%>
                     </div>
                     <div class="col-md-7">
-                        <h2 class="mb-16">Angel Whites</h2>
-                        <span class="h5 color-primary mb-16"><i class="fal fa-graduation-cap me-2"></i>Economics</span>
-                        <p class="mb-16">Lorem ipsum dolor sit amet consectetur. Egestas sem purus nulla libero tortor
-                            nunc mattis vestibulum enim. Faucibus neque sagittis amet lectus nec magna sollicitudin cras
-                            ante. Dignissim urna urna eget ipsum lorem mattis quis dictum. At nunc turpis ullamcorper ac
-                            massa eu. Id ornare fames nisl maecenas nibh at ipsum.</p>
-                        <p class="mb-16">Lorem ipsum dolor sit amet consectetur. Egestas sem purus nulla libero tortor
-                            nunc mattis vestibulum enim. Faucibus neque sagittis amet lectus nec magna sollicitudin cras
-                            ante. Dignissim urna urna eget ipsum lorem mattis quis dictum. </p>
+                        <h2 class="mb-16"><%=@teacher.name%></h2>
+                        <span class="h5 color-primary mb-16"><i class="fal fa-graduation-cap me-2"></i><%=@teacher.designation%></span>
+                        <p class="mb-16">
+                          <%=@teacher.profile_description%>
+                        </p>
+
                         <div class="teacher_stats mb-16">
                             <div class="stats_block">
                                 <div class="d-flex justify-content-between align-items-center mb-16">
@@ -40,13 +37,6 @@
                                 </div>
                                 <div class="skill_box mb-8">
                                     <div class="progress_bar" style="width: 90%;"></div>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet consectetur.</p>
-                            </div>
-                            <div class="stats_block">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <h5 class="title"><i class="fal fa-presentation"></i>Lectures</h5>
-                                    <span class="h6 dark-gray">450+ Videos</span>
                                 </div>
                             </div>
                             <div class="stats_block">

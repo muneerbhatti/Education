@@ -1,5 +1,5 @@
 class Post < ApplicationRecord
-  enum :status, [:draft,:published]
+  enum :status, [:draft,:published, :featured]
 
   validates :title, presence: true
   validates :body,  presence: true

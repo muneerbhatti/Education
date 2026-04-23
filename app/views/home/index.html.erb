@@ -375,66 +375,28 @@
           All</a>
       </div>
       <div class="row">
-        <div class="col-lg-4 col-md-6">
-          <div class="blog_card mb-24 mb-xl-0">
-            <div class="blog_card_img_block">
-              <%= image_tag "b-1.png" %>
-              <p class="date">15 Jan 2026</p>
-            </div>
-            <div class="blog_card_text_block">
-              <h5 class="mb-8"><a class="blog_title" href="blog-detail.html">Understanding Behavior Therapy: What Parents Should Know</a></h5>
-              <p class="mb-24">Learn how Applied Behavior Analysis uses evidence-based strategies to create positive behavioral change and support development...</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="author">
-                 <%= image_tag "u-1.png" %>
-                  <h6 class="dark-gray">BCBA Team</h6>
+        <%Post.featured.limit(3).each do |post|%>
+          <div class="col-lg-4 col-md-6">
+            <div class="blog_card mb-24 mb-xl-0">
+              <div class="blog_card_img_block">
+                <%= image_tag post.featured_image %>
+                <p class="date"><%=post.published_at&.strftime('%d/%m/%y')%></p>
+              </div>
+              <div class="blog_card_text_block">
+                <h5 class="mb-8"><a class="blog_title" href="blog-detail.html"><%=post.title%></a></h5>
+                <p class="mb-24"><%=post.body&.html_safe%></p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="author">
+                   <%= image_tag "u-1.png" %>
+                    <h6 class="dark-gray">Kaleidoscope Team</h6>
+                  </div>
+                  <a href="<%=post_path(slug: post.slug)%>" class="h6 color-primary educate_link_btn">Read More<i
+                      class="far fa-chevron-right"></i></a>
                 </div>
-                <a href="blog-detail.html" class="h6 color-primary educate_link_btn">Read More<i
-                    class="far fa-chevron-right"></i></a>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="blog_card mb-24 mb-xl-0">
-            <div class="blog_card_img_block">
-              <%= image_tag "b-2.png" %>
-              <p class="date">10 Jan 2026</p>
-            </div>
-            <div class="blog_card_text_block">
-              <h5 class="mb-8"><a class="blog_title" href="blog-detail.html">Social-Emotional Learning: Building Life Skills for Success</a></h5>
-              <p class="mb-24">Discover how SEL programs help children develop confidence, emotional regulation, and essential social skills...</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="author">
-                   <%# <%= image_tag "u-2.png" %>
-                  <h6 class="dark-gray">SEL Specialist</h6>
-                </div>
-                <a href="blog-detail.html" class="h6 color-primary educate_link_btn">Read More<i
-                    class="far fa-chevron-right"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="blog_card">
-            <div class="blog_card_img_block">
-              <%= image_tag "b-2.png" %>
-              <p class="date">5 Jan 2026</p>
-            </div>
-            <div class="blog_card_text_block">
-              <h5 class="mb-8"><a class="blog_title" href="blog-detail.html">The Benefits of Individualized Academic Tutoring</a></h5>
-              <p class="mb-24">How personalized tutoring helps students who haven't met grade-level expectations achieve their full potential...</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="author">
-                  <%= image_tag "u-3.png" %>
-                  <h6 class="dark-gray">Brandy & Corie</h6>
-                </div>
-                <a href="blog-detail.html" class="h6 color-primary educate_link_btn">Read More<i
-                    class="far fa-chevron-right"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
+        <%end%>
       </div>
     </div>
   </section>

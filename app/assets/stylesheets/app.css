@@ -2182,7 +2182,7 @@ input[type=search]::-webkit-search-results-decoration {
   -webkit-transition-delay: 0.3s;
   background-color: #cae9f0;
   opacity: 0.8;
-  cursor: url(/images//close.png), auto;
+  cursor: url(/images/close.png), auto;
 }
 @media (max-width: 767px) {
   .search-popup .search-popup__overlay {
@@ -5465,7 +5465,7 @@ footer .copyright_row P {
   }
 }
 .contact_banner .phone_number {
-  width: 316px;
+  //width: 316px;
   text-align: center;
   padding: 12px;
   box-shadow: 2px 1px 5px 0px rgba(2, 69, 122, 0.04), 9px 4px 10px 0px rgba(2, 69, 122, 0.03), 19px 10px 13px 0px rgba(2, 69, 122, 0.02), 35px 17px 15px 0px rgba(2, 69, 122, 0.01), 54px 27px 17px 0px rgba(2, 69, 122, 0);

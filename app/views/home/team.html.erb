@@ -20,20 +20,21 @@
 <section class="py-60">
     <div class="container">
         <div class="row">
+          <%@teachers.each do |teacher| %>
             <div class="col-xl-3 col-lg-4 col-sm-6">
                 <div class="team__card mb-24">
                     <div class="team__img_block">
-                        <img src="<%=asset_path 'Card.png'%>" alt="" class="team_img">
+                      <%=image_tag teacher.image, class: 'team_img'%>
                         <div class="team__content_block">
                             <div class="team__text_block">
-                                <h5 class="mb-8"><a href="/teacher_details">BCBA</a></h5>
+                                <h5 class="mb-8"><a href="/teacher_details"><%=teacher.specialist%></a></h5>
                                 <ul class="team__info unstyled mb-16">
-                                    <li><i class="fas fa-star"></i>5</li>
-                                    <li><i class="fal fa-graduation-cap"></i>Board Certified</li>
-                                    <li><i class="fal fa-clock"></i>Master's+</li>
+                                    <li><i class="fas fa-star"></i><%=teacher.rating%></li>
+                                    <li><i class="fal fa-graduation-cap"></i><%=teacher.designation%></li>
+                                    <li><i class="fal fa-clock"></i><%=teacher.email%></li>
                                 </ul>
-                                <p class="team_info_text mb-24">Doctoral or master's level professionals who design comprehensive treatment plans and supervise implementation.</p>
-                                <a href="/teacher_details" class="educate-btn mx-auto"><span
+                                <p class="team_info_text mb-24"><%=teacher.profile_description[0..50] ...%></p>
+                                <a href="<%=teacher_details_path(id: teacher)%>" class="educate-btn mx-auto"><span
                                         class="educate-btn__curve"></span>Learn More</a>
                                 <img src="<%=asset_path 'feture-bg-shape.png'%>" alt=""
                                     class="text_block_bg_shape">
@@ -42,169 +43,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-lg-4 col-sm-6">
-                <div class="team__card mb-24">
-                    <div class="team__img_block">
-                        <img src="<%=asset_path 'Card.png'%>" alt="" class="team_img">
-                        <div class="team__content_block">
-                            <div class="team__text_block">
-                                <h5 class="mb-8"><a href="/teacher_details">BCaBA</a></h5>
-                                <ul class="team__info unstyled mb-16">
-                                    <li><i class="fas fa-star"></i>5</li>
-                                    <li><i class="fal fa-graduation-cap"></i>Assistant Analyst</li>
-                                    <li><i class="fal fa-clock"></i>Bachelor's</li>
-                                </ul>
-                                <p class="team_info_text mb-24">Bachelor's level professionals who assist BCBAs in implementing behavior programs and collecting data.</p>
-                                <a href="/teacher_details" class="educate-btn mx-auto"><span
-                                        class="educate-btn__curve"></span>Learn More</a>
-                                <img src="<%=asset_path 'feture-bg-shape.png'%>" alt=""
-                                    class="text_block_bg_shape">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-sm-6">
-                <div class="team__card mb-24">
-                    <div class="team__img_block">
-                        <img src="<%=asset_path 'Card.png'%>" alt="" class="team_img">
-                        <div class="team__content_block">
-                            <div class="team__text_block">
-                                <h5 class="mb-8"><a href="/teacher_details">RBT</a></h5>
-                                <ul class="team__info unstyled mb-16">
-                                    <li><i class="fas fa-star"></i>5</li>
-                                    <li><i class="fal fa-graduation-cap"></i>Technician</li>
-                                    <li><i class="fal fa-clock"></i>Certified</li>
-                                </ul>
-                                <p class="team_info_text mb-24">Trained technicians who provide direct, one-on-one therapy following individualized treatment plans.</p>
-                                <a href="/teacher_details" class="educate-btn mx-auto"><span
-                                        class="educate-btn__curve"></span>Learn More</a>
-                                <img src="<%=asset_path 'feture-bg-shape.png'%>" alt=""
-                                    class="text_block_bg_shape">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-sm-6">
-                <div class="team__card mb-24">
-                    <div class="team__img_block">
-                        <img src="<%=asset_path 'Card.png'%>" alt="" class="team_img">
-                        <div class="team__content_block">
-                            <div class="team__text_block">
-                                <h5 class="mb-8"><a href="/teacher_details">ASL Specialist</a></h5>
-                                <ul class="team__info unstyled mb-16">
-                                    <li><i class="fas fa-star"></i>5</li>
-                                    <li><i class="fal fa-graduation-cap"></i>Sign Language</li>
-                                    <li><i class="fal fa-clock"></i>Expert</li>
-                                </ul>
-                                <p class="team_info_text mb-24">Comprehensive ASL instruction and interpretation services for deaf and hard-of-hearing individuals.</p>
-                                <a href="/teacher_details" class="educate-btn mx-auto"><span
-                                        class="educate-btn__curve"></span>Learn More</a>
-                                <img src="<%=asset_path 'feture-bg-shape.png'%>" alt=""
-                                    class="text_block_bg_shape">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-sm-6">
-                <div class="team__card mb-24">
-                    <div class="team__img_block">
-                        <img src="<%=asset_path 'Card.png'%>" alt="" class="team_img">
-                        <div class="team__content_block">
-                            <div class="team__text_block">
-                                <h5 class="mb-8"><a href="/teacher_details">Braille Instructor</a></h5>
-                                <ul class="team__info unstyled mb-16">
-                                    <li><i class="fas fa-star"></i>5</li>
-                                    <li><i class="fal fa-graduation-cap"></i>Literacy Expert</li>
-                                    <li><i class="fal fa-clock"></i>Certified</li>
-                                </ul>
-                                <p class="team_info_text mb-24">Expert Braille instruction and materials for blind and visually impaired individuals.</p>
-                                <a href="/teacher_details" class="educate-btn mx-auto"><span
-                                        class="educate-btn__curve"></span>Learn More</a>
-                                <img src="<%=asset_path 'feture-bg-shape.png'%>" alt=""
-                                    class="text_block_bg_shape">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-sm-6">
-                <div class="team__card mb-24">
-                    <div class="team__img_block">
-                        <img src="<%=asset_path 'Card.png'%>" alt="" class="team_img">
-                        <div class="team__content_block">
-                            <div class="team__text_block">
-                                <h5 class="mb-8"><a href="/teacher_details">Academic Tutor</a></h5>
-                                <ul class="team__info unstyled mb-16">
-                                    <li><i class="fas fa-star"></i>5</li>
-                                    <li><i class="fal fa-graduation-cap"></i>Education</li>
-                                    <li><i class="fal fa-clock"></i>Specialist</li>
-                                </ul>
-                                <p class="team_info_text mb-24">Individualized tutoring services using evidence-based teaching methods combined with behavioral strategies.</p>
-                                <a href="/teacher_details" class="educate-btn mx-auto"><span
-                                        class="educate-btn__curve"></span>Learn More</a>
-                                <img src="<%=asset_path 'feture-bg-shape.png'%>" alt=""
-                                    class="text_block_bg_shape">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-sm-6">
-                <div class="team__card mb-24">
-                    <div class="team__img_block">
-                        <img src="<%=asset_path 'Card.png'%>" alt="" class="team_img">
-                        <div class="team__content_block">
-                            <div class="team__text_block">
-                                <h5 class="mb-8"><a href="/teacher_details">Aquatic Therapist</a></h5>
-                                <ul class="team__info unstyled mb-16">
-                                    <li><i class="fas fa-star"></i>5</li>
-                                    <li><i class="fal fa-graduation-cap"></i>Water Therapy</li>
-                                    <li><i class="fal fa-clock"></i>Certified</li>
-                                </ul>
-                                <p class="team_info_text mb-24">Certified aquatic therapists combine behavioral strategies with water-based activities for holistic development.</p>
-                                <a href="/teacher_details" class="educate-btn mx-auto"><span
-                                        class="educate-btn__curve"></span>Learn More</a>
-                                <img src="<%=asset_path 'feture-bg-shape.png'%>" alt=""
-                                    class="text_block_bg_shape">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-sm-6">
-                <div class="team__card mb-24">
-                    <div class="team__img_block">
-                        <img src="<%=asset_path 'Card.png'%>" alt="" class="team_img">
-                        <div class="team__content_block">
-                            <div class="team__text_block">
-                                <h5 class="mb-8"><a href="/teacher_details">Equestrian Therapist</a></h5>
-                                <ul class="team__info unstyled mb-16">
-                                    <li><i class="fas fa-star"></i>5</li>
-                                    <li><i class="fal fa-graduation-cap"></i>Horse Therapy</li>
-                                    <li><i class="fal fa-clock"></i>Expert</li>
-                                </ul>
-                                <p class="team_info_text mb-24">Experienced equestrian therapists create safe, supportive environments that promote trust and communication skills.</p>
-                                <a href="/teacher_details" class="educate-btn mx-auto"><span
-                                        class="educate-btn__curve"></span>Learn More</a>
-                                <img src="<%=asset_path 'feture-bg-shape.png'%>" alt=""
-                                    class="text_block_bg_shape">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <ul class="pagination">
-                <li class="page-item"><a href="" class="page-link arrow" aria-label="next"><i
-                            class="far fa-chevron-left"></i></a></li>
-                <li class="page-item"><a class="page-link current" href="">1</a></li>
-                <li class="page-item"><a class="page-link" href="">2</a></li>
-                <li class="page-item"><a class="page-link" href="">3</a></li>
-                <li class="page-item"><a href="" class="page-link arrow" aria-label="next"><i
-                            class="far fa-chevron-right"></i></a></li>
-            </ul>
+          <%end%>
         </div>
     </div>
 </section>

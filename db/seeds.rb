@@ -1,7 +1,7 @@
 User.find_or_create_by!(email: 'aba@kaleidoscopekollege.com') do |user|
   user.first_name = 'Corie'
   user.last_name = ' '
-  user.password = '123456'
+  user.password = 'aba@kaleidoscopekollege.com'
   user.role = 'admin'
 end
 

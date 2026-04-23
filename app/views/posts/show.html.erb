@@ -1,0 +1,55 @@
+<!-- Page Title Banner Start -->
+        <section class="page_title_banner">
+            <div class="container">
+                <div class="content">
+                    <div class="title">
+                        <h1><%=@post.title%></h1>
+                        <img src="<%=asset_path 'tag.png'%>" alt="" class="tag">
+                    </div>
+                    <div class="educate-tilt"
+                        data-tilt-options='{ "glare": false, "maxGlare": 0, "maxTilt": 2, "speed": 700, "scale": 1 }'>
+                        <img src="<%=asset_path 'page_title.png'%>" alt="" class="main_img">
+                    </div>
+                    <img src="<%=asset_path 'circle-lines-2.png'%>" alt="" class="circle_vector">
+                </div>
+            </div>
+        </section>
+        <!-- Page Title Banner End -->
+
+        <!-- Blog Detail Area Start -->
+        <section class="py-60">
+            <div class="container">
+                <div class="blog_detail">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="about_blog_row mb-24">
+                                <div class="author_block">
+                                    <img src="assets/media/users/u-7.png" alt="">
+                                    <div>
+                                        <p class="mb-4p">Author:</p>
+                                        <h6>Kaleidoscope Team</h6>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="mb-4p">Published Date</p>
+                                    <h6><%=@post.published_at&.strftime('%d/%m/%y')%></h6>
+                                </div>
+                                <div>
+                                    <p class="mb-4p">Category</p>
+                                    <h6>NewsLetters</h6>
+                                </div>
+                            </div>
+                            <div class="tags mb-24">
+                              <span class="h6">#education</span><span class="h6">#learning</span><span
+                                    class="h6">#latest</span><span class="h6">#teachers</span>
+                            </div>
+                            <%=@post.body&.html_safe%>
+                        </div>
+                        <div class="col-lg-6">
+                            <%=image_tag @post.featured_image, class: ''%>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Blog Detail Area End -->
