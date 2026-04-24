@@ -9,7 +9,7 @@ class InstructorDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     id: Field::Number,
-    course: Field::BelongsTo,
+    courses: Field::HasMany,
     designation: Field::String,
     email: Field::String,
     name: Field::String,
@@ -28,7 +28,7 @@ class InstructorDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = %i[
     id
-    course
+    courses
     designation
     email
   ].freeze
@@ -37,7 +37,7 @@ class InstructorDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = %i[
     id
-    course
+    courses
     designation
     email
     name
@@ -53,7 +53,7 @@ class InstructorDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
-    course
+    courses
     designation
     email
     name
